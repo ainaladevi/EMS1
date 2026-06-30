@@ -1,0 +1,287 @@
+/* Overlay for Modal */
+.cem-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1080;
+  padding: 20px;
+}
+
+/* Modal Container */
+.cem-modal {
+  background: #FFFFFF;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.cem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #E2E8F0;
+}
+.cem-header-left {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.cem-header-icon {
+  background: #EFF6FF;
+  color: #2563EB;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cem-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0 0 4px 0;
+}
+.cem-subtitle {
+  font-size: 13px;
+  color: #64748B;
+  margin: 0;
+}
+.cem-close-btn {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  cursor: pointer;
+}
+.cem-close-btn:hover {
+  background: #F8FAFC;
+  color: #0F172A;
+}
+
+/* Stepper */
+.cem-stepper {
+  display: flex;
+  align-items: center;
+  padding: 20px 24px 0 24px;
+}
+.cem-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cem-step-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #CBD5E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #94A3B8;
+  background: #FFFFFF;
+}
+.cem-step-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #94A3B8;
+}
+.cem-step.active .cem-step-circle {
+  border-color: #2563EB;
+  color: #2563EB;
+}
+.cem-step.active .cem-step-label {
+  color: #2563EB;
+}
+.cem-step.completed .cem-step-circle {
+  border-color: #10B981;
+  background-color: #10B981;
+  color: #FFFFFF;
+}
+.cem-step.completed .cem-step-label {
+  color: #10B981;
+}
+.cem-step-line {
+  flex: 1;
+  height: 1px;
+  background-color: #E2E8F0;
+  margin: 0 16px;
+}
+
+/* Body (Scrollable) */
+.cem-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cem-body::-webkit-scrollbar {
+  width: 6px;
+}
+.cem-body::-webkit-scrollbar-thumb {
+  background-color: #CBD5E1;
+  border-radius: 3px;
+}
+
+/* Form Fields */
+.cem-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.cem-field {
+  display: flex;
+  flex-direction: column;
+}
+.cem-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+.cem-required {
+  color: #EF4444;
+}
+.cem-field input,
+.cem-field textarea {
+  padding: 10px 12px;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #334155;
+  background: #FFFFFF;
+  outline: none;
+  width: 100%;
+  font-family: inherit;
+}
+.cem-field input::placeholder,
+.cem-field textarea::placeholder {
+  color: #94A3B8;
+}
+.cem-field input:focus,
+.cem-field textarea:focus {
+  border-color: #2563EB;
+}
+
+/* Icon Inputs */
+.cem-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.cem-input-wrapper input {
+  padding-right: 36px;
+}
+.cem-icon-right {
+  position: absolute;
+  right: 12px;
+  color: #0F172A;
+  font-size: 16px;
+}
+
+/* Step 3: Role Selector */
+.cem-role-group {
+  display: flex;
+  gap: 12px;
+}
+.cem-role-btn {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.cem-role-btn:hover {
+  background: #F8FAFC;
+}
+.cem-role-btn.active {
+  background: #EFF6FF;
+  border-color: #2563EB;
+  color: #2563EB;
+}
+
+/* Step 3: Checkbox Group */
+.cem-checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+.cem-checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #2563EB;
+  cursor: pointer;
+}
+.cem-checkbox-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Footer */
+.cem-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #E2E8F0;
+  background: #FAFAF9;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.cem-btn-cancel {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.cem-btn-cancel:hover {
+  background: #F8FAFC;
+}
+.cem-btn-next {
+  background: #2563EB;
+  border: 1px solid #2563EB;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.cem-btn-next:hover {
+  background: #1D4ED8;
+}

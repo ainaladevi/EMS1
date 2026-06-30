@@ -1,0 +1,79 @@
+/* Custom Button Styles (Extending Bootstrap) */
+.btn-custom {
+  transition: all var(--transition-fast);
+  border-radius: var(--border-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-custom:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+}
+
+.btn-custom:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-custom:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Specific Button Variants */
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  color: white;
+  border: 1px solid var(--primary-color);
+}
+.btn-primary-custom:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: white;
+}
+
+.btn-secondary-custom {
+  background-color: var(--surface-color);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+.btn-secondary-custom:hover {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.btn-ghost-custom {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+.btn-ghost-custom:hover {
+  background-color: rgba(0,0,0,0.05);
+  box-shadow: none;
+}
+
+/* Card Styles */
+.hover-card {
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.hover-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.kpi-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}

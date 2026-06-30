@@ -1,0 +1,272 @@
+/* Overlay for Modal */
+.ehm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1070;
+  padding: 20px;
+}
+
+/* Modal Container */
+.ehm-modal {
+  background: #FFFFFF;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 540px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.ehm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #E2E8F0;
+}
+.ehm-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+}
+.ehm-title span {
+  font-weight: 500;
+  color: #64748B;
+}
+.ehm-close-btn {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  cursor: pointer;
+}
+.ehm-close-btn:hover {
+  background: #F8FAFC;
+  color: #0F172A;
+}
+
+/* Body (Scrollable) */
+.ehm-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Add Record Bar */
+.ehm-add-record-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.ehm-add-record-bar span {
+  font-size: 13px;
+  color: #94A3B8;
+}
+.ehm-btn-add-primary {
+  background: #2563EB;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.ehm-btn-add-primary:hover {
+  background: #1D4ED8;
+}
+
+/* New Entry Section */
+.ehm-new-entry-section {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #E2E8F0;
+  margin-bottom: 24px;
+}
+.ehm-new-entry-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #2563EB;
+  letter-spacing: 0.5px;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+}
+.ehm-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+.ehm-grid-2 > div:nth-child(3) {
+  /* Let the third column take the 3rd spot */
+}
+/* Wait, the first row has 3 items: COMPANY, DESIGNATION, START DATE */
+.ehm-field {
+  display: flex;
+  flex-direction: column;
+}
+.ehm-field label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #94A3B8;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.ehm-field input {
+  padding: 10px 12px;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #334155;
+  outline: none;
+  width: 100%;
+}
+.ehm-field input::placeholder {
+  color: #64748B;
+}
+.ehm-field input:focus {
+  border-color: #94A3B8;
+}
+
+/* Icon Inputs */
+.ehm-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.ehm-input-wrapper input {
+  padding-right: 36px;
+}
+.ehm-icon-right {
+  position: absolute;
+  right: 12px;
+  color: #0F172A;
+  font-size: 14px;
+}
+
+/* Actions in New Entry */
+.ehm-new-entry-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+.ehm-btn-cancel {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.ehm-btn-cancel:hover {
+  background: #F8FAFC;
+}
+.ehm-btn-save {
+  background: #2563EB;
+  color: #FFFFFF;
+  border: 1px solid #2563EB;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.ehm-btn-save:hover {
+  background: #1D4ED8;
+}
+
+/* Records List */
+.ehm-record-item {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #F1F5F9;
+  margin-bottom: 16px;
+}
+.ehm-record-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.ehm-record-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.ehm-record-title {
+  font-size: 14px;
+  color: #64748B;
+  margin: 0 0 4px 0;
+}
+.ehm-record-title strong {
+  color: #0F172A;
+  font-weight: 700;
+}
+.ehm-record-date {
+  font-size: 12px;
+  color: #94A3B8;
+  margin: 0;
+}
+.ehm-record-actions {
+  display: flex;
+  gap: 8px;
+}
+.ehm-btn-outline {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #64748B;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.ehm-btn-outline:hover {
+  background: #F8FAFC;
+  color: #0F172A;
+}
+.ehm-record-desc {
+  font-size: 13px;
+  color: #64748B;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Footer */
+.ehm-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #E2E8F0;
+}
+.ehm-btn-close-large {
+  width: 100%;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.ehm-btn-close-large:hover {
+  background: #F1F5F9;
+  color: #0F172A;
+}
