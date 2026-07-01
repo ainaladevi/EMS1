@@ -62,7 +62,7 @@ const DeleteEmployeeModal = ({ show, onClose, employee }) => {
         {/* Footer */}
         <div className="dem-footer">
           <button className="dem-btn-cancel" onClick={onClose}>Cancel</button>
-          <button 
+          <button onClick={() => alert("Button clicked!")} 
             className="dem-btn-delete" 
             disabled={confirmText !== 'DELETE'}
           >

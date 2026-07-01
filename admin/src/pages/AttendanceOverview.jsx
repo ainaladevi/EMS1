@@ -253,7 +253,7 @@ const AttendanceOverview = () => {
           <div className="attendance-filters">
             <div className="date-picker-wrap">
               <span>22 - 04 - 2026</span>
-              <FiCalendar className="date-icon" />
+              <FiCalendar className="att-date-icon" />
             </div>
             <div className="custom-dropdown-wrapper">
               <button 
@@ -320,9 +320,9 @@ const AttendanceOverview = () => {
             <div className="calendar-panel">
               <div className="calendar-header">
                 <div className="calendar-month-selector">
-                  <button className="nav-arrow-btn"><FiChevronLeft size={16} /></button>
+                  <button onClick={() => alert("Button clicked!")} className="nav-arrow-btn"><FiChevronLeft size={16} /></button>
                   <h3 className="calendar-month-title">April 2026</h3>
-                  <button className="nav-arrow-btn"><FiChevronRight size={16} /></button>
+                  <button onClick={() => alert("Button clicked!")} className="nav-arrow-btn"><FiChevronRight size={16} /></button>
                 </div>
                 <div className="calendar-hint">Click any date to view details</div>
               </div>
@@ -489,13 +489,13 @@ const AttendanceOverview = () => {
               </div>
               <div className="attendance-filters">
                 <div className="custom-dropdown-wrapper">
-                  <button className="filter-btn-outline">
+                  <button onClick={() => alert("Button clicked!")} className="filter-btn-outline">
                     All employees <FiChevronDown style={{ marginLeft: '4px' }} />
                   </button>
                 </div>
                 <div className="date-picker-wrap">
                   <span>22 - 04 - 2026</span>
-                  <FiCalendar className="date-icon" />
+                  <FiCalendar className="att-date-icon" />
                 </div>
               </div>
             </div>
@@ -585,7 +585,7 @@ const AttendanceOverview = () => {
                       >
                         <FiEye size={14} /> View detail
                       </button>
-                      <button className="action-dropdown-item text-danger">
+                      <button onClick={() => alert("Button clicked!")} className="action-dropdown-item text-danger">
                         <FiTrash2 size={14} /> Delete
                       </button>
                     </div>
@@ -612,7 +612,7 @@ const AttendanceOverview = () => {
                 <td><span className="text-bold-dark">{rec.totalHrs}</span></td>
                 <td className="time-dark">{rec.reason}</td>
                 <td>
-                  <button className="btn-view-pill">View</button>
+                  <button onClick={() => alert("Button clicked!")} className="btn-view-pill">View</button>
                 </td>
               </tr>
             ))}
@@ -637,11 +637,11 @@ const AttendanceOverview = () => {
                 <td>
                   {rec.status === 'Pending' ? (
                     <div className="action-buttons-flex">
-                      <button className="btn-approve-outline">Approve</button>
-                      <button className="btn-reject-outline">Reject</button>
+                      <button onClick={() => alert("Button clicked!")} className="btn-approve-outline">Approve</button>
+                      <button onClick={() => alert("Button clicked!")} className="btn-reject-outline">Reject</button>
                     </div>
                   ) : (
-                    <button className="btn-view-pill">View</button>
+                    <button onClick={() => alert("Button clicked!")} className="btn-view-pill">View</button>
                   )}
                 </td>
               </tr>
@@ -653,11 +653,11 @@ const AttendanceOverview = () => {
             {activeTab === "Overtime" ? "Showing 1-8 of 48" : activeTab === "Regularization" ? "Showing 1-8 of 48" : activeTab === "History" ? "Showing 1-8 of 48" : "Showing 1-8 of 18"}
           </div>
           <div className="pagination-controls">
-            <button className="page-btn"><FiArrowLeft size={14} /></button>
-            <button className="page-btn active">1</button>
-            <button className="page-btn">2</button>
-            <button className="page-btn">3</button>
-            <button className="page-btn"><FiArrowRight size={14} /></button>
+            <button onClick={() => alert("Button clicked!")} className="page-btn"><FiArrowLeft size={14} /></button>
+            <button onClick={() => alert("Button clicked!")} className="page-btn active">1</button>
+            <button onClick={() => alert("Button clicked!")} className="page-btn">2</button>
+            <button onClick={() => alert("Button clicked!")} className="page-btn">3</button>
+            <button onClick={() => alert("Button clicked!")} className="page-btn"><FiArrowRight size={14} /></button>
           </div>
         </div>
       </div>

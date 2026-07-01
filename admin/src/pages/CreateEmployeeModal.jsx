@@ -153,10 +153,10 @@ const CreateEmployeeModal = ({ show, onClose }) => {
               <div className="cem-field">
                 <label>System role</label>
                 <div className="cem-role-group">
-                  <button className="cem-role-btn">Admin</button>
-                  <button className="cem-role-btn active">Employee</button>
-                  <button className="cem-role-btn">HR manager</button>
-                  <button className="cem-role-btn">Manager</button>
+                  <button onClick={() => alert("Button clicked!")} className="cem-role-btn">Admin</button>
+                  <button onClick={() => alert("Button clicked!")} className="cem-role-btn active">Employee</button>
+                  <button onClick={() => alert("Button clicked!")} className="cem-role-btn">HR manager</button>
+                  <button onClick={() => alert("Button clicked!")} className="cem-role-btn">Manager</button>
                 </div>
               </div>
 

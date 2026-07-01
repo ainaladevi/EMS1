@@ -69,7 +69,7 @@ const EmploymentHistoryModal = ({ show, onClose, employee }) => {
 
               <div className="ehm-new-entry-actions">
                 <button className="ehm-btn-cancel" onClick={() => setShowNewEntry(false)}>Cancel</button>
-                <button className="ehm-btn-save">Add</button>
+                <button onClick={() => alert("Button clicked!")} className="ehm-btn-save">Add</button>
               </div>
             </div>
           )}
@@ -83,8 +83,8 @@ const EmploymentHistoryModal = ({ show, onClose, employee }) => {
                   <p className="ehm-record-date">2022-07-01 to 2024-10-31</p>
                 </div>
                 <div className="ehm-record-actions">
-                  <button className="ehm-btn-outline">Edit</button>
-                  <button className="ehm-btn-outline">Delete</button>
+                  <button onClick={() => alert("Button clicked!")} className="ehm-btn-outline">Edit</button>
+                  <button onClick={() => alert("Button clicked!")} className="ehm-btn-outline">Delete</button>
                 </div>
               </div>
               <p className="ehm-record-desc">
@@ -99,8 +99,8 @@ const EmploymentHistoryModal = ({ show, onClose, employee }) => {
                   <p className="ehm-record-date">2020-06-01 to 2022-05-31</p>
                 </div>
                 <div className="ehm-record-actions">
-                  <button className="ehm-btn-outline">Edit</button>
-                  <button className="ehm-btn-outline">Delete</button>
+                  <button onClick={() => alert("Button clicked!")} className="ehm-btn-outline">Edit</button>
+                  <button onClick={() => alert("Button clicked!")} className="ehm-btn-outline">Delete</button>
                 </div>
               </div>
               <p className="ehm-record-desc">

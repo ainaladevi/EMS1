@@ -58,10 +58,10 @@ const Employees = () => {
           <h1 className="hr-page-title">HR Overview</h1>
         </div>
         <div className="hr-header-actions">
-          <button className="btn-outline-custom">
+          <button onClick={() => alert("Button clicked!")} className="btn-outline-custom">
             <FiDownload /> Upload Document
           </button>
-          <button className="btn-outline-custom">
+          <button onClick={() => alert("Button clicked!")} className="btn-outline-custom">
             <FiCheckCircle /> Onboard Task
           </button>
           <button className="btn-primary-custom" onClick={() => setShowCreateModal(true)}>
@@ -125,7 +125,7 @@ const Employees = () => {
           <select className="hr-select">
             <option>Sort: Emp ID</option>
           </select>
-          <button className="btn-reset">Reset</button>
+          <button onClick={() => alert("Button clicked!")} className="btn-reset">Reset</button>
         </div>
 
         <div className="hr-sub-toolbar" style={{ justifyContent: selectedEmps.length > 0 ? 'space-between' : 'flex-end' }}>
@@ -137,7 +137,7 @@ const Employees = () => {
           <div style={{ display: 'flex', gap: '12px' }}>
             {selectedEmps.length > 0 && (
               <>
-                <button className="btn-edit-sub">Edit</button>
+                <button onClick={() => alert("Button clicked!")} className="btn-edit-sub">Edit</button>
                 <button className="btn-delete-sub" onClick={() => setDeleteModalEmp(employees.find(e => e.id === selectedEmps[0]))}>Delete</button>
               </>
             )}
@@ -146,7 +146,7 @@ const Employees = () => {
                 setHistoryModalEmp(employees.find(e => e.id === selectedEmps[0]));
               }
             }}>History</button>
-            <button className="btn-bulk-onboard">Bulk onboard</button>
+            <button onClick={() => alert("Button clicked!")} className="btn-bulk-onboard">Bulk onboard</button>
           </div>
         </div>
 
@@ -201,7 +201,7 @@ const Employees = () => {
                 <td>
                   <div className="action-btns">
                     <button className="btn-action-outline" onClick={() => setViewModalEmp(emp)}>View</button>
-                    <button className="btn-action-outline">Onboard</button>
+                    <button onClick={() => alert("Button clicked!")} className="btn-action-outline">Onboard</button>
                   </div>
                 </td>
               </tr>
@@ -212,10 +212,10 @@ const Employees = () => {
         <div className="hr-pagination">
           <span>Showing 1-8 of 8 employees</span>
           <div className="pagination-controls">
-            <button className="page-btn"><FiChevronLeft /></button>
-            <button className="page-btn active">1</button>
-            <button className="page-btn">2</button>
-            <button className="page-btn"><FiChevronRight /></button>
+            <button onClick={() => alert("Button clicked!")} className="page-btn"><FiChevronLeft /></button>
+            <button onClick={() => alert("Button clicked!")} className="page-btn active">1</button>
+            <button onClick={() => alert("Button clicked!")} className="page-btn">2</button>
+            <button onClick={() => alert("Button clicked!")} className="page-btn"><FiChevronRight /></button>
           </div>
         </div>
       </div>

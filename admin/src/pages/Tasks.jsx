@@ -209,7 +209,7 @@ const Tasks = () => {
                 >
                   <FiEdit className="me-1"/> Edit
                 </button>
-                <button className="btn-outline-small"><FiTrash2 className="me-1"/> Delete</button>
+                <button onClick={() => alert("Button clicked!")} className="btn-outline-small"><FiTrash2 className="me-1"/> Delete</button>
               </div>
             </div>
 
@@ -316,9 +316,9 @@ const Tasks = () => {
                   <div className="form-group flex-1">
                     <label className="form-label">Priority</label>
                     <div className="priority-pills">
-                      <button type="button" className="priority-pill">Low</button>
-                      <button type="button" className="priority-pill active-medium">Medium</button>
-                      <button type="button" className="priority-pill">High</button>
+                      <button onClick={() => alert("Button clicked!")} type="button" className="priority-pill">Low</button>
+                      <button onClick={() => alert("Button clicked!")} type="button" className="priority-pill active-medium">Medium</button>
+                      <button onClick={() => alert("Button clicked!")} type="button" className="priority-pill">High</button>
                     </div>
                   </div>
                 </div>

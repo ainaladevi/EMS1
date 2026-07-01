@@ -60,7 +60,7 @@ const Analytics = () => {
           <div className="analytics-card">
             <div className="ac-header">
               <div className="ac-title"><FiGrid size={16} /> Overview Dashboard</div>
-              <button className="ac-btn-refresh"><FiRefreshCw size={14} /> Refresh</button>
+              <button onClick={() => alert("Button clicked!")} className="ac-btn-refresh"><FiRefreshCw size={14} /> Refresh</button>
             </div>
 
             <div className="ac-section">
@@ -230,10 +230,10 @@ const Analytics = () => {
 
           <div className="attendance-filters">
             <div className="filter-group">
-              <button className="filter-btn">Last 7 Days</button>
-              <button className="filter-btn">Last 30 Days</button>
-              <button className="filter-btn">This Month</button>
-              <button className="filter-btn active">Last Month</button>
+              <button onClick={() => alert("Button clicked!")} className="filter-btn">Last 7 Days</button>
+              <button onClick={() => alert("Button clicked!")} className="filter-btn">Last 30 Days</button>
+              <button onClick={() => alert("Button clicked!")} className="filter-btn">This Month</button>
+              <button onClick={() => alert("Button clicked!")} className="filter-btn active">Last Month</button>
             </div>
             
             <div className="date-pickers-group">
@@ -259,7 +259,7 @@ const Analytics = () => {
               </div>
             </div>
 
-            <button className="btn-load-analytics"><FiClock size={14} /> Load Analytics</button>
+            <button onClick={() => alert("Button clicked!")} className="btn-load-analytics"><FiClock size={14} /> Load Analytics</button>
           </div>
 
           <div className="info-alert">
@@ -373,10 +373,10 @@ const Analytics = () => {
 
           <div className="attendance-filters">
             <div className="filter-group">
-              <button className="filter-btn">Last 7 Days</button>
-              <button className="filter-btn">Last 30 Days</button>
-              <button className="filter-btn">This Month</button>
-              <button className="filter-btn active">Last Month</button>
+              <button onClick={() => alert("Button clicked!")} className="filter-btn">Last 7 Days</button>
+              <button onClick={() => alert("Button clicked!")} className="filter-btn">Last 30 Days</button>
+              <button onClick={() => alert("Button clicked!")} className="filter-btn">This Month</button>
+              <button onClick={() => alert("Button clicked!")} className="filter-btn active">Last Month</button>
             </div>
             
             <div className="date-pickers-group">
@@ -396,7 +396,7 @@ const Analytics = () => {
               </div>
             </div>
 
-            <button className="btn-load-analytics"><FiClock size={14} /> Load Productivity</button>
+            <button onClick={() => alert("Button clicked!")} className="btn-load-analytics"><FiClock size={14} /> Load Productivity</button>
           </div>
 
           <div className="info-alert">
