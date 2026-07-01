@@ -8,8 +8,7 @@ const EmployeeProfileModal = ({ show, onClose, employee }) => {
   return (
     <div className="epm-overlay" onClick={onClose}>
       <div className="epm-modal" onClick={e => e.stopPropagation()}>
-        
-        {/* Header */}
+
         <div className="epm-header">
           <h2 className="epm-title">Employee Profile</h2>
           <button className="epm-close-btn" onClick={onClose}>
@@ -17,10 +16,8 @@ const EmployeeProfileModal = ({ show, onClose, employee }) => {
           </button>
         </div>
 
-        {/* Body */}
         <div className="epm-body">
-          
-          {/* Section: IDENTITY */}
+
           <div className="epm-section">
             <h3 className="epm-section-title">IDENTITY (READ-ONLY)</h3>
             <div className="epm-grid epm-grid-2">
@@ -43,7 +40,6 @@ const EmployeeProfileModal = ({ show, onClose, employee }) => {
             </div>
           </div>
 
-          {/* Section: PERSONAL DETAILS */}
           <div className="epm-section">
             <h3 className="epm-section-title">PERSONAL DETAILS</h3>
             <div className="epm-grid epm-grid-2">
@@ -77,7 +73,6 @@ const EmployeeProfileModal = ({ show, onClose, employee }) => {
             </div>
           </div>
 
-          {/* Section: BANK DETAILS */}
           <div className="epm-section">
             <h3 className="epm-section-title">BANK DETAILS</h3>
             <div className="epm-grid epm-grid-2">
@@ -106,7 +101,6 @@ const EmployeeProfileModal = ({ show, onClose, employee }) => {
             </div>
           </div>
 
-          {/* Section: CONTACT INFORMATION */}
           <div className="epm-section">
             <h3 className="epm-section-title epm-flex-title">
               <FiMail className="epm-title-icon" /> CONTACT INFORMATION
@@ -129,7 +123,6 @@ const EmployeeProfileModal = ({ show, onClose, employee }) => {
             </div>
           </div>
 
-          {/* Section: EMERGENCY CONTACT */}
           <div className="epm-section">
             <h3 className="epm-section-title">EMERGENCY CONTACT</h3>
             <div className="epm-grid epm-grid-3">
@@ -148,7 +141,6 @@ const EmployeeProfileModal = ({ show, onClose, employee }) => {
             </div>
           </div>
 
-          {/* Section: DOCUMENTS */}
           <div className="epm-section">
             <div className="epm-flex-between">
               <h3 className="epm-section-title epm-flex-title">
@@ -176,10 +168,9 @@ const EmployeeProfileModal = ({ show, onClose, employee }) => {
 
         </div>
 
-        {/* Footer */}
         <div className="epm-footer">
           <button className="epm-btn-secondary" onClick={onClose}>Close</button>
-          <button onClick={() => console.log("Button clicked!")} className="epm-btn-primary">Update Profile</button>
+          <button onClick={onClose} className="epm-btn-primary">Update Profile</button>
         </div>
 
       </div>

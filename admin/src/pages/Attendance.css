@@ -45,7 +45,6 @@
   margin: 0;
 }
 
-/* 5 Column Grid for Stat Cards */
 .attendance-stat-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -84,14 +83,12 @@
   color: #94A3B8;
 }
 
-/* Stat Value Colors */
 .att-stat-green { color: #10B981; }
 .att-stat-red { color: #EF4444; }
 .att-stat-orange { color: #F59E0B; }
 .att-stat-blue { color: #3B82F6; }
 .att-stat-purple { color: #8B5CF6; }
 
-/* Tabs Row */
 .attendance-tabs {
   display: flex;
   gap: 12px;
@@ -141,7 +138,6 @@
   font-weight: 700;
 }
 
-/* Controls Row */
 .attendance-controls {
   display: flex;
   justify-content: space-between;
@@ -216,7 +212,6 @@
   color: #94A3B8;
 }
 
-/* Custom Dropdown */
 .custom-dropdown-wrapper {
   position: relative;
 }
@@ -256,7 +251,6 @@
   color: #2563EB;
 }
 
-/* Table Styles */
 .attendance-table-container {
   background-color: #FFFFFF;
   border: 1px solid #EAECEF;
@@ -292,7 +286,6 @@
   border-bottom: none;
 }
 
-/* User Info Cell */
 .user-info-cell {
   display: flex;
   align-items: center;
@@ -311,7 +304,6 @@
   flex-shrink: 0;
 }
 
-/* Avatar Colors */
 .avatar-purple { background-color: #F5F3FF; color: #7C3AED; }
 .avatar-red { background-color: #FFF1F2; color: #E11D48; }
 .avatar-orange { background-color: #FFF7ED; color: #EA580C; }
@@ -333,16 +325,13 @@
   margin: 0;
 }
 
-/* Time Colors */
 .attendance-table td.time-green { color: #10B981; font-weight: 500; }
 .attendance-table td.time-orange { color: #F59E0B; font-weight: 500; }
 .attendance-table td.time-dark { color: #475569; font-weight: 500; }
 
-/* Location Types */
 .loc-office { color: #64748B; display: flex; align-items: center; gap: 6px; }
 .loc-wfh { color: #3B82F6; display: flex; align-items: center; gap: 6px; }
 
-/* Status Pills */
 .status-pill-dot {
   display: inline-flex;
   align-items: center;
@@ -372,7 +361,6 @@
 .pill-wfh { background-color: #EFF6FF; color: #2563EB; border: 1px solid #BFDBFE; }
 .pill-wfh .status-dot { background-color: #2563EB; }
 
-/* Regularization Pills */
 .pill-pending { background-color: #FFFBEB; color: #D97706; border: 1px solid #FDE68A; }
 .pill-pending .status-dot { background-color: #D97706; }
 
@@ -385,7 +373,6 @@
 .pill-both, .pill-check-in, .pill-check-out { background-color: #FEF2F2; color: #EF4444; border: 1px solid #FECACA; }
 .pill-both .status-dot, .pill-check-in .status-dot, .pill-check-out .status-dot { background-color: #EF4444; }
 
-/* Actions Dot Menu */
 .btn-dot-menu {
   background: transparent;
   border: 1px solid #E2E8F0;
@@ -405,7 +392,6 @@
   color: #0F172A;
 }
 
-/* Action Dropdown Menu */
 .action-dropdown-menu {
   position: absolute;
   top: 100%;
@@ -448,7 +434,6 @@
   background-color: #FEF2F2;
 }
 
-/* Pagination */
 .pagination-footer {
   display: flex;
   justify-content: space-between;
@@ -500,7 +485,6 @@
   cursor: not-allowed;
 }
 
-/* Detail Panel Drawer */
 .detail-panel-overlay {
   position: fixed;
   top: 0;
@@ -610,7 +594,6 @@
   color: #2563EB;
 }
 
-/* Timeline */
 .drawer-timeline {
   position: relative;
   padding-left: 14px;
@@ -685,7 +668,6 @@
   color: #0F172A;
 }
 
-/* Overtime View Specifics */
 .table-header-bar {
   display: flex;
   justify-content: space-between;
@@ -742,7 +724,6 @@
   background-color: #DBEAFE;
 }
 
-/* Regularization Action Buttons */
 .action-buttons-flex {
   display: flex;
   align-items: center;
@@ -783,7 +764,6 @@
   background-color: #FEF2F2;
 }
 
-/* Monthly Summary Wrapper */
 .monthly-summary-wrapper {
   display: flex;
   flex-direction: column;
@@ -811,7 +791,6 @@
   flex-shrink: 0;
 }
 
-/* Calendar Header */
 .calendar-header {
   display: flex;
   justify-content: space-between;
@@ -850,7 +829,6 @@
   font-size: 13px;
 }
 
-/* Legend */
 .calendar-legend {
   display: flex;
   gap: 16px;
@@ -866,7 +844,6 @@
   font-weight: 500;
 }
 
-/* Calendar Grid */
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -965,7 +942,6 @@
   margin-bottom: auto;
 }
 
-/* Detail Panel Sidebar */
 .detail-panel-title {
   font-size: 16px;
   font-weight: 700;
@@ -1057,7 +1033,6 @@
 .detail-pill.pill-absent { background-color: #FFF1F2; color: #F43F5E; }
 .detail-pill.pill-late { background-color: #FFFBEB; color: #F59E0B; }
 
-/* Chart Panel */
 .chart-panel-header {
   font-size: 16px;
   font-weight: 700;

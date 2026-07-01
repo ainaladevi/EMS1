@@ -1,4 +1,4 @@
-/* Overlay for Modal */
+
 .cem-overlay {
   position: fixed;
   top: 0;
@@ -13,7 +13,6 @@
   padding: 20px;
 }
 
-/* Modal Container */
 .cem-modal {
   background: #FFFFFF;
   border-radius: 12px;
@@ -25,7 +24,6 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Header */
 .cem-header {
   display: flex;
   justify-content: space-between;
@@ -76,7 +74,6 @@
   color: #0F172A;
 }
 
-/* Stepper */
 .cem-stepper {
   display: flex;
   align-items: center;
@@ -127,7 +124,6 @@
   margin: 0 16px;
 }
 
-/* Body (Scrollable) */
 .cem-body {
   padding: 24px;
   overflow-y: auto;
@@ -144,7 +140,6 @@
   border-radius: 3px;
 }
 
-/* Form Fields */
 .cem-grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -184,7 +179,6 @@
   border-color: #2563EB;
 }
 
-/* Icon Inputs */
 .cem-input-wrapper {
   position: relative;
   display: flex;
@@ -200,7 +194,6 @@
   font-size: 16px;
 }
 
-/* Step 3: Role Selector */
 .cem-role-group {
   display: flex;
   gap: 12px;
@@ -224,7 +217,6 @@
   color: #2563EB;
 }
 
-/* Step 3: Checkbox Group */
 .cem-checkbox-group {
   display: flex;
   align-items: center;
@@ -245,7 +237,6 @@
   cursor: pointer;
 }
 
-/* Footer */
 .cem-footer {
   display: flex;
   justify-content: flex-end;

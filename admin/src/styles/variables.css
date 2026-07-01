@@ -1,43 +1,37 @@
 :root {
-  /* Color Palette */
-  --primary-color: #0d6efd; /* Bootstrap primary */
+  
+  --primary-color: #0d6efd; 
   --primary-hover: #0b5ed7;
   --secondary-color: #6c757d;
   --success-color: #198754;
   --danger-color: #dc3545;
   --warning-color: #ffc107;
   --info-color: #0dcaf0;
-  
-  /* Background & Surface */
-  --bg-color: #f8f9fa; /* Light grey background for the app */
-  --surface-color: #ffffff; /* Card/Modal background */
+
+  --bg-color: #f8f9fa; 
+  --surface-color: #ffffff; 
   --sidebar-bg: #ffffff;
   --topbar-bg: #ffffff;
-  
-  /* Text Colors */
+
   --text-main: #212529;
   --text-muted: #6c757d;
-  
-  /* Borders */
+
   --border-color: #dee2e6;
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
   --border-radius-lg: 12px;
   --border-radius-xl: 16px;
-  
-  /* Shadows */
+
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
   --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
   --shadow-hover: 0 10px 20px rgba(0,0,0,0.08);
-  
-  /* Transitions */
+
   --transition-fast: 150ms ease;
   --transition-normal: 180ms ease;
   --transition-slow: 300ms ease;
 }
 
-/* Dark Mode Support Placeholder */
 [data-theme='dark'] {
   --bg-color: #121212;
   --surface-color: #1e1e1e;

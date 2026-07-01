@@ -3,7 +3,6 @@
   flex-direction: column;
 }
 
-/* We can reuse Dashboard/Announcements styles, but ensuring independence */
 .page-header-flex {
   display: flex;
   justify-content: space-between;
@@ -58,7 +57,6 @@
   background-color: #1D4ED8;
 }
 
-/* Stat Cards */
 .stat-cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -119,7 +117,6 @@
 .bg-danger-light { background-color: #FEF2F2; }
 .text-danger { color: #EF4444; }
 
-/* Filters */
 .filters-section {
   display: flex;
   align-items: center;
@@ -148,7 +145,6 @@
   border-color: #2563EB;
 }
 
-/* Task List */
 .task-list {
   display: flex;
   flex-direction: column;
@@ -351,7 +347,6 @@
   align-items: center;
 }
 
-/* Base Modal Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -462,7 +457,6 @@
   color: #0F172A;
 }
 
-/* Modal Specific Styles */
 .task-modal-container {
   max-width: 628px;
   width: 100%;
@@ -526,7 +520,6 @@
   background-color: #FFFBEB;
 }
 
-/* Icons inside inputs */
 .input-with-icon-left, .input-with-icon-right {
   position: relative;
   display: flex;
@@ -549,8 +542,6 @@
   color: #64748B;
 }
 
-/* Since Tasks page doesn't import Announcements.css directly, add essential form classes if needed.
-   Vite might share them globally, but redefining explicitly ensures safety. */
 .form-group {
   margin-bottom: 16px;
 }

@@ -17,8 +17,6 @@ import {
 } from 'react-icons/fi';
 import './Tasks.css';
 
-
-
 const PullRequestIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="18" cy="18" r="3"></circle>
@@ -33,7 +31,6 @@ const BitbucketIcon = () => (
     <path d="M2.271 0C.635 0 .023 1.144.17 2.455l2.84 18.062c.162 1.055 1.085 1.547 2.062 1.483h13.914c.95-.064 1.706-.725 1.838-1.666l2.97-17.842C23.953 1.135 23.328 0 21.684 0H2.271zm15.424 14.869H7.21l-.974-6.311h11.954l-1.495 6.311z"/>
   </svg>
 );
-
 
 const Tasks = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -191,8 +188,7 @@ const Tasks = () => {
       <div className="task-list mt-4">
         {tasks.map(task => (
           <div key={task.id} className={`task-card ${task.isActive ? 'active-border' : ''}`}>
-            
-            {/* Column 1: Details */}
+
             <div className="task-col task-col-main">
               <h3 className="task-title">{task.title}</h3>
               <p className="task-subtitle">{task.subtitle}</p>
@@ -213,7 +209,6 @@ const Tasks = () => {
               </div>
             </div>
 
-            {/* Column 2: DevOps Link */}
             <div className="task-col task-col-devops">
               <h4 className="col-label">DEVOPS LINK</h4>
               
@@ -242,7 +237,6 @@ const Tasks = () => {
               )}
             </div>
 
-            {/* Column 3: Status & Pipeline */}
             <div className="task-col task-col-status">
               <div className="status-badges">
                 <span className={`task-badge badge-${task.status.stage.toLowerCase()}`}>{task.status.stage}</span>

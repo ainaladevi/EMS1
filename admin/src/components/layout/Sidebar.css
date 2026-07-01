@@ -72,7 +72,6 @@
   flex: 1;
 }
 
-/* Custom Scrollbar for Sidebar */
 .sidebar-menu::-webkit-scrollbar {
   width: 4px;
 }

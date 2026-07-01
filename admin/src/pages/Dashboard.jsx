@@ -12,20 +12,19 @@ import {
 } from 'react-icons/fi';
 import './Dashboard.css';
 
-// Exact SVG Icons matching the reference
 const UserLaptopIcon = () => (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    {/* Shoulders */}
+    
     <path d="M4 21v-2a8 8 0 0 1 16 0v2"></path>
-    {/* Head */}
+    
     <circle cx="12" cy="8" r="4"></circle>
-    {/* Visor/Curve on head */}
+    
     <path d="M8.5 9.5c2 1 5 1 7 0"></path>
-    {/* Laptop screen with background fill to cover shoulders */}
+    
     <path d="M8 21v-4a1.5 1.5 0 0 1 1.5-1.5h5A1.5 1.5 0 0 1 16 17v4" fill="#EFF6FF"></path>
-    {/* Laptop base line */}
+    
     <path d="M5 21h14"></path>
-    {/* Tiny circle on laptop */}
+    
     <circle cx="12" cy="18" r="1" fill="currentColor"></circle>
   </svg>
 );
@@ -195,7 +194,7 @@ const Dashboard = () => {
       </div>
 
       <div className="kpi-cards-grid">
-        {/* Card 1 */}
+        
         <div className="kpi-card-exact">
           <div className="kpi-card-header">
             <span className="kpi-card-title">Active Workforce</span>
@@ -207,7 +206,6 @@ const Dashboard = () => {
           <div className="kpi-subtitle">Employees active today</div>
         </div>
 
-        {/* Card 2 */}
         <div className="kpi-card-exact">
           <div className="kpi-card-header">
             <span className="kpi-card-title">Workforce Overview</span>
@@ -219,7 +217,6 @@ const Dashboard = () => {
           <div className="kpi-subtitle">Total employees in the organization</div>
         </div>
 
-        {/* Card 3 */}
         <div className="kpi-card-exact">
           <div className="kpi-card-header">
             <span className="kpi-card-title">Pending Projects</span>
@@ -231,7 +228,6 @@ const Dashboard = () => {
           <div className="kpi-subtitle">8 active, 7 Completed</div>
         </div>
 
-        {/* Card 4 */}
         <div className="kpi-card-exact">
           <div className="kpi-card-header">
             <span className="kpi-card-title">System Activity</span>
@@ -243,8 +239,7 @@ const Dashboard = () => {
           <div className="kpi-subtitle">Recent updates and usage</div>
         </div>
       </div>
-      
-      {/* Announcements Section */}
+
       <div className="content-section mt-4">
         <div className="panel-container">
           <div className="panel-header-flex">
@@ -286,7 +281,6 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Devices & Session Manager Section */}
       <div className="content-section mt-4">
         <div className="panel-container">
           <div className="panel-header-flex border-bottom-soft">

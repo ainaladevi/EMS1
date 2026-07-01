@@ -4,7 +4,6 @@
   min-height: 100vh;
 }
 
-/* Page Header */
 .page-header {
   display: flex;
   justify-content: space-between;
@@ -73,7 +72,6 @@
   background-color: #F8FAFC;
 }
 
-/* Stats Row */
 .leave-stats-row {
   display: flex;
   gap: 20px;
@@ -114,7 +112,6 @@
   font-weight: 500;
 }
 
-/* Tabs */
 .leave-tabs {
   display: flex;
   gap: 12px;
@@ -165,7 +162,6 @@
   color: #FFFFFF;
 }
 
-/* Table Containers */
 .leave-table-container {
   background-color: #FFFFFF;
   border: 1px solid #E2E8F0;
@@ -197,7 +193,6 @@
   font-weight: 600;
 }
 
-/* Sub Tabs (History) */
 .history-sub-tabs {
   display: flex;
   padding: 16px 24px 0 24px;
@@ -231,7 +226,6 @@
   margin-left: 4px;
 }
 
-/* Controls */
 .leave-controls {
   display: flex;
   justify-content: space-between;
@@ -269,7 +263,6 @@
   gap: 12px;
 }
 
-/* Table */
 .leave-table {
   width: 100%;
   border-collapse: collapse;
@@ -291,14 +284,13 @@
   vertical-align: middle;
 }
 
-/* Prevent wrapping on specific columns to keep them neat, but allow Reason column to wrap */
-.leave-table td:nth-child(1), /* User info */
-.leave-table td:nth-child(2), /* Leave type */
-.leave-table td:nth-child(3), /* From Date */
-.leave-table td:nth-child(4), /* To Date */
-.leave-table td:nth-child(5), /* Days */
-.leave-table td:nth-child(7), /* Status */
-.leave-table td:nth-child(8)  /* Actions */ {
+.leave-table td:nth-child(1), 
+.leave-table td:nth-child(2), 
+.leave-table td:nth-child(3), 
+.leave-table td:nth-child(4), 
+.leave-table td:nth-child(5), 
+.leave-table td:nth-child(7), 
+.leave-table td:nth-child(8)   {
   white-space: nowrap;
 }
 
@@ -313,7 +305,6 @@
   color: #64748B;
 }
 
-/* Leave Type Pills */
 .leave-pill {
   font-size: 11px;
   font-weight: 700;
@@ -327,7 +318,6 @@
 .leave-sick { background-color: #FEF2F2; color: #EF4444; }
 .leave-casual { background-color: #FFFBEB; color: #F59E0B; }
 
-/* Status Pills */
 .status-pill {
   display: inline-flex;
   align-items: center;
@@ -358,7 +348,6 @@
 .pill-rejected { background-color: #FFF1F2; color: #F43F5E; }
 .pill-rejected .status-dot { background-color: #F43F5E; }
 
-/* Table Action Buttons */
 .action-buttons-cell {
   display: flex;
   align-items: center;
@@ -415,7 +404,6 @@
 }
 .btn-view-outline:hover { background-color: #DBEAFE; }
 
-/* Table User Info */
 .user-info-cell { display: flex; align-items: center; gap: 12px; white-space: nowrap; }
 .avatar-circle {
   width: 32px;
@@ -430,12 +418,11 @@
 }
 .avatar-blue { background-color: #EFF6FF; color: #2563EB; }
 .avatar-purple { background-color: #F5F3FF; color: #7C3AED; }
-.avatar-pink { background-color: #FFF1F2; color: #2563EB; } /* Specifically blue text on pale red background for KP as per reference */
+.avatar-pink { background-color: #FFF1F2; color: #2563EB; } 
 
 .user-name-text { font-size: 13px; font-weight: 600; color: #0F172A; margin: 0; white-space: nowrap; }
 .user-dept-text { font-size: 11px; color: #64748B; margin: 0; }
 
-/* Dropdowns */
 .custom-dropdown {
   position: absolute;
   top: 100%;
@@ -492,7 +479,6 @@
   color: inherit;
 }
 
-/* Pagination */
 .pagination-footer {
   display: flex;
   justify-content: space-between;
@@ -531,8 +517,7 @@
   background-color: #F8FAFC;
 }
 
-/* Modal Overlay */
-.modal-overlay {
+.leave-side-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -540,9 +525,10 @@
   bottom: 0;
   background-color: rgba(15, 23, 42, 0.4);
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   z-index: 1000;
+  padding-right: 24px;
 }
 
 .leave-detail-modal {
@@ -695,7 +681,6 @@
   background-color: #E2E8F0;
 }
 
-/* Slide-over Panel Overlay */
 .slide-over-overlay {
   position: fixed;
   top: 0;
@@ -705,10 +690,9 @@
   background-color: rgba(15, 23, 42, 0.4);
   z-index: 1000;
   display: flex;
-  justify-content: flex-end; /* Align panel to the right */
+  justify-content: flex-end; 
 }
 
-/* Slide-over Panel */
 .slide-over-panel {
   width: 460px;
   height: 100vh;
@@ -849,7 +833,6 @@
   background-color: #F8FAFC;
 }
 
-/* Balances Tab */
 .balances-filters {
   display: flex;
   gap: 16px;
@@ -922,7 +905,6 @@
   color: #0F172A;
 }
 
-/* Theme Colors */
 .theme-blue .stat-row:not(.bar-used) .stat-fill { background-color: #93C5FD; }
 .theme-blue .bar-used .stat-fill { background-color: #2563EB; }
 .theme-blue .stat-row:not(.bar-used) .stat-value { color: #3B82F6; }
@@ -946,7 +928,6 @@
   margin-top: 16px;
 }
 
-/* History Tab Specific */
 .btn-icon-only {
   width: 32px;
   height: 32px;
@@ -965,7 +946,6 @@
   color: #0F172A;
 }
 
-/* Policy Tab */
 .policy-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1017,7 +997,6 @@
   margin-bottom: 0;
 }
 
-/* Theme Colors for Policy Cards */
 .border-blue { border-left-color: #2563EB; }
 .badge-blue { background-color: #EFF6FF; color: #2563EB; }
 .list-blue li::marker { color: #2563EB; }
@@ -1042,7 +1021,6 @@
 .badge-green { background-color: #ECFDF5; color: #10B981; }
 .list-green li::marker { color: #10B981; }
 
-/* Calendar Tab */
 .calendar-content {
   display: flex;
   gap: 24px;
@@ -1077,7 +1055,6 @@
   line-height: 1.5;
 }
 
-/* Calendar Header */
 .calendar-header {
   display: flex;
   justify-content: space-between;
@@ -1112,7 +1089,6 @@
   color: #94A3B8;
 }
 
-/* Calendar Legend */
 .calendar-legend {
   display: flex;
   gap: 24px;
@@ -1138,7 +1114,6 @@
 .dot-holiday { background-color: #2563EB; }
 .dot-weekend { background-color: #CBD5E1; }
 
-/* Calendar Grid */
 .calendar-weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -1192,7 +1167,6 @@
   height: 16px;
 }
 
-/* Specific Day Modifiers */
 .calendar-day.disabled .day-number,
 .calendar-day.disabled .day-label {
   color: #CBD5E1;
@@ -1211,7 +1185,6 @@
   background-color: #EFF6FF;
 }
 
-/* Calendar Right Pane Details */
 .calendar-details-card.populated {
   padding: 32px 24px;
 }

@@ -17,7 +17,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Custom Scrollbar for a premium look */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -36,7 +35,6 @@ body {
   background: var(--secondary-color); 
 }
 
-/* Base link styles */
 a {
   text-decoration: none;
   color: var(--primary-color);

@@ -12,8 +12,7 @@ const DeleteEmployeeModal = ({ show, onClose, employee }) => {
   return (
     <div className="dem-overlay" onClick={onClose}>
       <div className="dem-modal" onClick={e => e.stopPropagation()}>
-        
-        {/* Header */}
+
         <div className="dem-header">
           <div className="dem-header-left">
             <div className="dem-header-icon">
@@ -29,7 +28,6 @@ const DeleteEmployeeModal = ({ show, onClose, employee }) => {
           </button>
         </div>
 
-        {/* Body */}
         <div className="dem-body">
           
           <div className="dem-center-icon">
@@ -59,7 +57,6 @@ const DeleteEmployeeModal = ({ show, onClose, employee }) => {
 
         </div>
 
-        {/* Footer */}
         <div className="dem-footer">
           <button className="dem-btn-cancel" onClick={onClose}>Cancel</button>
           <button onClick={() => console.log("Button clicked!")} 

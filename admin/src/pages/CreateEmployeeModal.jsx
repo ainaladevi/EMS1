@@ -10,8 +10,7 @@ const CreateEmployeeModal = ({ show, onClose }) => {
   return (
     <div className="cem-overlay" onClick={onClose}>
       <div className="cem-modal" onClick={e => e.stopPropagation()}>
-        
-        {/* Header */}
+
         <div className="cem-header">
           <div className="cem-header-left">
             <div className="cem-header-icon">
@@ -27,7 +26,6 @@ const CreateEmployeeModal = ({ show, onClose }) => {
           </button>
         </div>
 
-        {/* Stepper */}
         <div className="cem-stepper">
           <div className={`cem-step ${step > 1 ? 'completed' : step === 1 ? 'active' : ''}`}>
             <div className="cem-step-circle">
@@ -51,7 +49,6 @@ const CreateEmployeeModal = ({ show, onClose }) => {
           </div>
         </div>
 
-        {/* Body */}
         <div className="cem-body">
           {step === 1 && (
             <>
@@ -176,7 +173,6 @@ const CreateEmployeeModal = ({ show, onClose }) => {
           )}
         </div>
 
-        {/* Footer */}
         <div className="cem-footer">
           {step > 1 && (
             <button className="cem-btn-cancel" onClick={() => setStep(step - 1)} style={{ display: 'flex', alignItems: 'center' }}>

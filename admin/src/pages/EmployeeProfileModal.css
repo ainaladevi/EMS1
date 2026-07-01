@@ -1,4 +1,4 @@
-/* Overlay for Modal */
+
 .epm-overlay {
   position: fixed;
   top: 0;
@@ -9,11 +9,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1050; /* Above Bootstrap navs */
+  z-index: 1050; 
   padding: 20px;
 }
 
-/* Modal Container */
 .epm-modal {
   background: #FFFFFF;
   border-radius: 12px;
@@ -25,7 +24,6 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Header */
 .epm-header {
   display: flex;
   justify-content: space-between;
@@ -56,7 +54,6 @@
   color: #0F172A;
 }
 
-/* Body (Scrollable) */
 .epm-body {
   padding: 24px;
   overflow-y: auto;
@@ -70,7 +67,6 @@
   border-radius: 3px;
 }
 
-/* Sections */
 .epm-section {
   margin-bottom: 28px;
 }
@@ -94,7 +90,6 @@
   font-size: 14px;
 }
 
-/* Grid Layouts */
 .epm-grid {
   display: grid;
   gap: 16px;
@@ -109,7 +104,6 @@
   grid-template-columns: 1fr;
 }
 
-/* Form Fields */
 .epm-field {
   display: flex;
   flex-direction: column;
@@ -140,7 +134,6 @@
   color: #475569;
 }
 
-/* Icon Inputs */
 .epm-input-wrapper {
   position: relative;
   display: flex;
@@ -148,7 +141,7 @@
 }
 .epm-input-wrapper input {
   width: 100%;
-  padding-right: 36px; /* space for icon */
+  padding-right: 36px; 
 }
 .epm-icon-right {
   position: absolute;
@@ -157,7 +150,6 @@
   font-size: 14px;
 }
 
-/* Documents Section */
 .epm-flex-between {
   display: flex;
   justify-content: space-between;
@@ -227,7 +219,6 @@
   background: #F8FAFC;
 }
 
-/* Footer */
 .epm-footer {
   display: flex;
   justify-content: space-between;
@@ -267,7 +258,6 @@
   background: #1D4ED8;
 }
 
-/* Contact Cards (Inner Border) */
 .epm-contact-card {
   display: flex;
   flex-direction: column;

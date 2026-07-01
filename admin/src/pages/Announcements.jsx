@@ -20,7 +20,6 @@ import {
 } from 'react-icons/fi';
 import './Announcements.css';
 
-// Custom Icons for Stat Cards
 const BellDotIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
     <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
@@ -137,6 +136,12 @@ const Announcements = () => {
       setAnnouncements(announcements.filter(a => a.id !== modalState.data.id));
       setModalState({ ...modalState, isOpen: false });
     }
+  };
+
+  const handleSaveAnnouncement = () => {
+    // In a real app, you would collect form data here. 
+    // For now, we'll just close the modal.
+    setModalState({ ...modalState, isOpen: false });
   };
 
   return (
@@ -458,7 +463,7 @@ const Announcements = () => {
 
             <div className="modal-footer">
               <button className="btn-cancel" onClick={() => setModalState({ ...modalState, isOpen: false })}>Cancel</button>
-              <button onClick={() => console.log("Button clicked!")} className="btn-save">
+              <button onClick={handleSaveAnnouncement} className="btn-save">
                 <FiCheck className="me-2" /> Save announcement
               </button>
             </div>

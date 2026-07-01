@@ -122,7 +122,6 @@
   color: #EF4444;
 }
 
-/* Table Area */
 .hr-table-container {
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
@@ -185,7 +184,6 @@
   cursor: pointer;
 }
 
-/* HR Table */
 .hr-table {
   width: 100%;
   border-collapse: collapse;
@@ -261,7 +259,6 @@
   background: #10B981;
 }
 
-/* Sub-Toolbar */
 .hr-sub-toolbar {
   display: flex;
   justify-content: flex-end;
@@ -329,7 +326,6 @@
   background: #D1FAE5;
 }
 
-/* Actions */
 .action-btns {
   display: flex;
   align-items: center;
@@ -402,7 +398,6 @@
   color: #FFFFFF;
 }
 
-/* Action Dropdown */
 .hr-action-dropdown {
   padding: 8px 0;
   border-radius: 12px;

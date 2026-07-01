@@ -118,7 +118,7 @@ const LeaveManagement = () => {
 
       {activeTab === 'Applications' && (
         <div className="applications-content">
-          {/* Pending Table */}
+          
           <div className="leave-table-container">
             <div className="table-section-header">
               <h3>All Pending <span className="header-count">(6)</span></h3>
@@ -652,9 +652,8 @@ const LeaveManagement = () => {
         );
       })()}
 
-      {/* Leave Detail Modal (Pending) */}
       {selectedLeave && (
-        <div className="modal-overlay">
+        <div className="leave-side-overlay">
           <div className="leave-detail-modal">
             <div className="modal-header">
               <h2>Leave Request Details</h2>
@@ -711,7 +710,6 @@ const LeaveManagement = () => {
         </div>
       )}
 
-      {/* Slide-over Panel for History */}
       {selectedHistoryLeave && (
         <div className="slide-over-overlay">
           <div className="slide-over-panel">

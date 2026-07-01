@@ -50,7 +50,6 @@
   background: #F8FAFC;
 }
 
-/* Tabs */
 .comp-tabs-container {
   display: flex;
   background: #FFFFFF;
@@ -99,7 +98,6 @@
   color: #2563EB;
 }
 
-/* Content */
 .comp-section-title {
   font-size: 16px;
   font-weight: 700;
@@ -123,7 +121,6 @@
   color: #0F172A;
 }
 
-/* Table */
 .comp-table {
   width: 100%;
   border-collapse: collapse;
@@ -150,7 +147,6 @@
   color: #0F172A;
 }
 
-/* Status Pill */
 .status-pill {
   display: inline-block;
   padding: 4px 12px;
@@ -163,7 +159,6 @@
   color: #16A34A;
 }
 
-/* View Button */
 .btn-view {
   padding: 6px 16px;
   background: #FFFFFF;
@@ -178,7 +173,6 @@
   background: #F8FAFC;
 }
 
-/* Pending Grid */
 .pending-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -284,7 +278,6 @@
   background: #1D4ED8;
 }
 
-/* Modal Styles */
 .comp-modal-overlay {
   position: fixed;
   top: 0;
@@ -406,7 +399,6 @@
   background: #F8FAFC;
 }
 
-/* Policy Details Glassmorphism Modal */
 .policy-details-modal {
   width: 100%;
   max-width: 896px;
@@ -570,7 +562,6 @@
   background: #1D4ED8;
 }
 
-/* My Compliance Tab */
 .my-compliance-tab {
   padding-top: 16px;
 }
@@ -709,7 +700,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Categories Tab */
 .categories-tab {
   padding-top: 16px;
 }
@@ -811,7 +801,6 @@
   background: #F8FAFC;
 }
 
-/* Acknowledgments Tab */
 .acknowledgments-tab {
   padding-top: 16px;
 }
@@ -938,7 +927,6 @@
   color: #64748B;
 }
 
-/* Create Policy Modal */
 .cpm-overlay {
   position: fixed;
   top: 0;
@@ -1100,7 +1088,6 @@
   background: #1D4ED8;
 }
 
-/* Success Banner */
 .comp-success-banner {
   background: #DCFCE7;
   border: 1px solid #86EFAC;
@@ -1141,7 +1128,6 @@
   opacity: 1;
 }
 
-/* Compliance Report Tab */
 .cr-tab {
   padding-top: 16px;
 }

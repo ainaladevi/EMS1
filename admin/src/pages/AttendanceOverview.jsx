@@ -143,14 +143,12 @@ const AttendanceOverview = () => {
   };
 
   const filteredRecords = records.filter(rec => {
-    // 1. Search Query Match
+
     const matchesSearch = rec.name.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    // 2. Status Match
+
     let normalizedRecStatus = rec.status === 'Wfh' ? 'Work From Home' : rec.status;
     const matchesStatus = selectedStatus === 'All status' || normalizedRecStatus === selectedStatus;
-    
-    // 3. Department Match
+
     let matchesDept = true;
     if (selectedDept !== 'All Departments' && selectedDept !== 'All Employees') {
       const searchWord = selectedDept.split(' ')[0]; // "Engineer" or "Development"
@@ -663,7 +661,6 @@ const AttendanceOverview = () => {
       </div>
       )}
 
-      {/* Slide-out Detail Drawer */}
       {selectedRecordDetail && (
         <div className="detail-panel-overlay" onClick={() => setSelectedRecordDetail(null)}>
           <div className="detail-panel-drawer" onClick={(e) => e.stopPropagation()}>

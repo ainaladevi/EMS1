@@ -43,7 +43,6 @@
   background-color: #2563EB;
 }
 
-/* Stat Cards */
 .stat-cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -90,7 +89,6 @@
   font-size: 16px;
 }
 
-/* Specific text colors */
 .text-warning { color: #D97706; }
 .bg-warning-light { background-color: #FEF3C7; }
 
@@ -98,7 +96,6 @@
 .bg-danger-light { background-color: #FFF1F2; }
 .text-danger { color: #E11D48; }
 
-/* Filters Section */
 .filters-section {
   display: flex;
   justify-content: space-between;
@@ -112,13 +109,13 @@
 
 .pill-filters {
   display: flex;
-  gap: 8px; /* Slightly tighter gap between pills */
+  gap: 8px; 
 }
 
 .filter-pill {
-  background-color: transparent; /* No background by default */
-  border: 1px solid #E2E8F0; /* Soft border */
-  color: #64748B; /* Lighter text color */
+  background-color: transparent; 
+  border: 1px solid #E2E8F0; 
+  color: #64748B; 
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 13px;
@@ -161,10 +158,10 @@
   background-color: #FFFFFF;
   border: 1px solid #E2E8F0;
   border-radius: 8px;
-  padding: 6px 12px 6px 32px; /* Tighter padding for search */
+  padding: 6px 12px 6px 32px; 
   font-size: 13px;
   color: #0F172A;
-  width: 200px; /* Slightly narrower */
+  width: 200px; 
   transition: border-color 0.2s;
   outline: none;
 }
@@ -177,7 +174,7 @@
   background-color: #FFFFFF;
   border: 1px solid #E2E8F0;
   color: #64748B;
-  width: 32px; /* Matched height with search input */
+  width: 32px; 
   height: 32px;
   border-radius: 8px;
   display: flex;
@@ -232,14 +229,13 @@
   color: #3B82F6;
 }
 
-/* Modal Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(15, 23, 42, 0.5); /* #0F172A with 50% opacity */
+  background-color: rgba(15, 23, 42, 0.5); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -486,7 +482,6 @@
   background-color: #FEE2E2;
 }
 
-/* Detail View */
 .detail-view-container {
   width: 100%;
 }

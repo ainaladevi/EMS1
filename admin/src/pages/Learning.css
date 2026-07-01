@@ -5,7 +5,6 @@
   min-height: 100%;
 }
 
-/* Header */
 .lm-header {
   margin-bottom: 24px;
 }
@@ -72,7 +71,6 @@
   cursor: pointer;
 }
 
-/* KPI Grid */
 .lm-kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -131,7 +129,6 @@
 .text-pink { color: #EC4899; }
 .text-blue { color: #3B82F6; }
 
-/* Tabs */
 .lm-tabs {
   display: inline-flex;
   gap: 24px;
@@ -165,7 +162,6 @@
   font-size: 16px;
 }
 
-/* Filters */
 .lm-filters {
   display: flex;
   justify-content: space-between;
@@ -224,7 +220,6 @@
   background-size: 14px;
 }
 
-/* Course Grid */
 .lm-course-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -419,10 +414,6 @@
   color: #94A3B8;
 }
 
-/* =========================================
-   Create Course Wizard Styles
-========================================= */
-
 .lm-create-course-view {
   display: flex;
   flex-direction: column;
@@ -453,7 +444,6 @@
   margin-bottom: 32px;
 }
 
-/* Wizard Stepper */
 .lm-wizard-stepper {
   display: flex;
   align-items: center;
@@ -519,7 +509,6 @@
   color: inherit;
 }
 
-/* Form Card */
 .lm-form-card {
   background: #FFFFFF;
   border-radius: 12px;
@@ -576,7 +565,6 @@
   gap: 24px;
 }
 
-/* Dropzone */
 .lm-dropzone {
   border: 2px dashed #E2E8F0;
   border-radius: 8px;
@@ -621,7 +609,6 @@
   color: #94A3B8;
 }
 
-/* Tags Input */
 .lm-tags-input-container {
   display: flex;
   align-items: center;
@@ -660,7 +647,6 @@
   color: #94A3B8;
 }
 
-/* Assign Users UI */
 .lm-search-input-wrapper {
   position: relative;
   display: flex;
@@ -777,7 +763,6 @@
   background: #E2E8F0;
 }
 
-/* Form Footer */
 .lm-form-footer {
   display: flex;
   justify-content: flex-end;
@@ -813,7 +798,6 @@
   cursor: pointer;
 }
 
-/* Completion Rules UI */
 .lm-rule-row {
   display: flex;
   align-items: center;
@@ -885,7 +869,6 @@
   transform: translateX(20px);
 }
 
-/* Review & Publish UI */
 .lm-review-card {
   border: 1px solid #CBD5E1;
   border-radius: 12px;
@@ -957,10 +940,6 @@
   font-size: 12px;
   font-weight: 600;
 }
-
-/* =========================================
-   COURSE DETAILS & ANALYTICS VIEW
-   ========================================= */
 
 .lm-course-details-view {
   display: flex;
@@ -1056,7 +1035,6 @@
   margin-top: 4px;
 }
 
-/* Radial Progress */
 .lm-radial-progress {
   width: 56px;
   height: 56px;
@@ -1105,7 +1083,6 @@
   }
 }
 
-/* Enrolled Table Section */
 .lm-enrolled-table-section {
   background: #FFFFFF;
   border-radius: 12px;
@@ -1277,10 +1254,6 @@
 .btn-remind:hover {
   background: #E2E8F0;
 }
-
-/* =========================================
-   EDIT COURSE MODAL
-   ========================================= */
 
 .lm-modal-overlay {
   position: fixed;
@@ -1493,10 +1466,6 @@
   flex-shrink: 0;
 }
 
-/* =========================================
-   SEND REMINDER MODAL
-   ========================================= */
-
 .lm-reminder-hero {
   display: flex;
   flex-direction: column;
@@ -1543,10 +1512,6 @@
 .lm-reminder-preview-box strong {
   color: #1E293B;
 }
-
-/* =========================================
-   ASSIGN COURSE MODAL
-   ========================================= */
 
 .lm-assign-cards {
   display: grid;

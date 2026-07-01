@@ -56,10 +56,10 @@
 
 .kpi-card-exact {
   background-color: #FFFFFF;
-  border-radius: 12px; /* Smoother radius matching reference */
-  border: 1px solid #EAECEF; /* Added soft border like reference */
+  border-radius: 12px; 
+  border: 1px solid #EAECEF; 
   padding: 24px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02); /* Soft shadow */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02); 
   display: flex;
   flex-direction: column;
 }
@@ -73,12 +73,12 @@
 
 .kpi-card-title {
   font-size: 14px;
-  font-weight: 500; /* Lighter font weight like reference */
+  font-weight: 500; 
   color: #64748B;
 }
 
 .kpi-icon-wrapper {
-  width: 40px; /* Larger icon wrappers matching reference */
+  width: 40px; 
   height: 40px;
   background-color: #EFF6FF;
   border-radius: 50%;
@@ -93,7 +93,7 @@
 }
 
 .kpi-value {
-  font-size: 28px; /* Perfectly sized matching reference */
+  font-size: 28px; 
   font-weight: 700;
   color: #0F172A;
   margin-bottom: 8px;
@@ -101,19 +101,18 @@
 }
 
 .text-success-custom {
-  color: #059669; /* Darker green matching the '50' */
+  color: #059669; 
 }
 
 .kpi-subtitle {
   font-size: 13px;
   color: #94A3B8;
-  font-weight: 400; /* Normal weight for subtitle */
+  font-weight: 400; 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* Panel Containers (Announcements & Devices) */
 .mt-4 {
   margin-top: 1.5rem;
 }
@@ -151,7 +150,6 @@
   margin: 0;
 }
 
-/* Announcements specific */
 .btn-mark-read {
   display: flex;
   align-items: center;
@@ -190,7 +188,7 @@
   border: 1px solid #EAECEF;
   padding: 16px 20px;
   transition: all 0.2s ease;
-  overflow: hidden; /* To ensure the left border respects the border radius */
+  overflow: hidden; 
 }
 
 .announcement-card:hover {
@@ -206,7 +204,7 @@
 .announcement-icon-wrapper {
   width: 40px;
   height: 40px;
-  border-radius: 8px; /* Rounded square instead of circle */
+  border-radius: 8px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,7 +274,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s;
-  border: 1px solid #E2E8F0; /* Visible border like in reference */
+  border: 1px solid #E2E8F0; 
 }
 
 .action-btn:hover {
@@ -285,7 +283,6 @@
   border-color: #CBD5E1;
 }
 
-/* Color variations perfectly matching reference */
 .color-danger { border-left: 4px solid #EF4444; }
 .bg-danger-light { background-color: #FEF2F2; }
 .text-danger { color: #EF4444; }
@@ -294,7 +291,6 @@
 .bg-primary-light { background-color: #EFF6FF; }
 .text-primary { color: #3B82F6; }
 
-/* Devices Section specific */
 .tab-toggle {
   display: flex;
   background-color: #F1F5F9;
@@ -386,7 +382,7 @@
 }
 
 .current-session {
-  border: 1px solid rgba(16, 185, 129, 0.5); /* #10B981 */
+  border: 1px solid rgba(16, 185, 129, 0.5); 
 }
 
 .current-badge {
@@ -411,7 +407,7 @@
 .device-icon-wrapper {
   width: 40px;
   height: 40px;
-  border-radius: 8px; /* Matched announcements */
+  border-radius: 8px; 
   display: flex;
   align-items: center;
   justify-content: center;

@@ -12,8 +12,7 @@ const EmploymentHistoryModal = ({ show, onClose, employee }) => {
   return (
     <div className="ehm-overlay" onClick={onClose}>
       <div className="ehm-modal" onClick={e => e.stopPropagation()}>
-        
-        {/* Header */}
+
         <div className="ehm-header">
           <h2 className="ehm-title">Employment History for <span>{empId}</span></h2>
           <button className="ehm-close-btn" onClick={onClose}>
@@ -21,7 +20,6 @@ const EmploymentHistoryModal = ({ show, onClose, employee }) => {
           </button>
         </div>
 
-        {/* Body */}
         <div className="ehm-body">
           
           <div className="ehm-add-record-bar">
@@ -112,7 +110,6 @@ const EmploymentHistoryModal = ({ show, onClose, employee }) => {
 
         </div>
 
-        {/* Footer */}
         <div className="ehm-footer">
           <button className="ehm-btn-close-large" onClick={onClose}>Close</button>
         </div>

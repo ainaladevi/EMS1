@@ -1,4 +1,4 @@
-/* Overlay for Modal */
+
 .ehm-overlay {
   position: fixed;
   top: 0;
@@ -13,7 +13,6 @@
   padding: 20px;
 }
 
-/* Modal Container */
 .ehm-modal {
   background: #FFFFFF;
   border-radius: 12px;
@@ -25,7 +24,6 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Header */
 .ehm-header {
   display: flex;
   justify-content: space-between;
@@ -60,14 +58,12 @@
   color: #0F172A;
 }
 
-/* Body (Scrollable) */
 .ehm-body {
   padding: 24px;
   overflow-y: auto;
   flex: 1;
 }
 
-/* Add Record Bar */
 .ehm-add-record-bar {
   display: flex;
   justify-content: space-between;
@@ -95,7 +91,6 @@
   background: #1D4ED8;
 }
 
-/* New Entry Section */
 .ehm-new-entry-section {
   padding-bottom: 24px;
   border-bottom: 1px solid #E2E8F0;
@@ -115,9 +110,9 @@
   gap: 16px;
 }
 .ehm-grid-2 > div:nth-child(3) {
-  /* Let the third column take the 3rd spot */
+  
 }
-/* Wait, the first row has 3 items: COMPANY, DESIGNATION, START DATE */
+
 .ehm-field {
   display: flex;
   flex-direction: column;
@@ -145,7 +140,6 @@
   border-color: #94A3B8;
 }
 
-/* Icon Inputs */
 .ehm-input-wrapper {
   position: relative;
   display: flex;
@@ -161,7 +155,6 @@
   font-size: 14px;
 }
 
-/* Actions in New Entry */
 .ehm-new-entry-actions {
   display: flex;
   gap: 12px;
@@ -194,7 +187,6 @@
   background: #1D4ED8;
 }
 
-/* Records List */
 .ehm-record-item {
   padding-bottom: 16px;
   border-bottom: 1px solid #F1F5F9;
@@ -250,7 +242,6 @@
   margin: 0;
 }
 
-/* Footer */
 .ehm-footer {
   padding: 16px 24px;
   border-top: 1px solid #E2E8F0;

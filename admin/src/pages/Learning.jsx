@@ -251,26 +251,22 @@ const Learning = () => {
   const [editingQuizId, setEditingQuizId] = useState(null);
   const [wizardStep, setWizardStep] = useState(1);
   const [selectedCourseId, setSelectedCourseId] = useState(null);
-  
-  // Edit Modal State
+
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [editModalTab, setEditModalTab] = useState('Add Module'); // 'Add Module' or 'Create Quiz'
   const [editContentType, setEditContentType] = useState('PDF'); // 'PDF', 'Video', or 'Link'
-  
-  // Quiz State
+
   const [shuffleQuestions, setShuffleQuestions] = useState(true);
   const [allowRetakes, setAllowRetakes] = useState(false);
   const [allowMultipleAttempts, setAllowMultipleAttempts] = useState(false);
 
-  // Edit Quiz State
   const [editShuffle, setEditShuffle] = useState(true);
   const [editRetakes, setEditRetakes] = useState(false);
   const [editShowAnswers, setEditShowAnswers] = useState(true);
-  
-  // Reminder State
+  const [mockQuizAnswers, setMockQuizAnswers] = useState({});
+
   const [isReminderModalOpen, setIsReminderModalOpen] = useState(false);
-  
-  // Assign Course State
+
   const [isAssignModalOpen, setIsAssignModalOpen] = useState(false);
   const [assignSelection, setAssignSelection] = useState(null);
   const [notifyEmployees, setNotifyEmployees] = useState(true);
@@ -553,9 +549,9 @@ const Learning = () => {
             <div className="lm-analytics-view">
               {selectedEmployeeForAnalytics ? (
                 selectedCourseForAnalytics ? (
-                  // Level 3: Course Analytics Drill-down
+
                   <div>
-                    {/* Course Drill-down Header */}
+                    
                     <div style={{ marginBottom: '24px', background: '#FFFFFF', borderRadius: '12px', border: '1px solid #E2E8F0', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', padding: '24px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#64748B', marginBottom: '24px' }}>
                         <span style={{ color: '#2563EB', cursor: 'pointer' }} onClick={() => { setSelectedEmployeeForAnalytics(null); setSelectedCourseForAnalytics(null); }}>Analytics</span>
@@ -581,21 +577,19 @@ const Learning = () => {
                       </div>
                     </div>
 
-                    {/* Main Layout Grid */}
                     <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '24px', marginBottom: '24px' }}>
-                      {/* Left Column - Modules */}
+                      
                       <div style={{ background: '#FFFFFF', borderRadius: '12px', border: '1px solid #E2E8F0', padding: '24px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
                         <div style={{ fontSize: '14px', fontWeight: '700', color: '#1E293B', marginBottom: '24px', paddingBottom: '16px', borderBottom: '1px solid #F1F5F9' }}>Course Modules & Progress</div>
                         
                         <div style={{ position: 'relative', paddingLeft: '8px' }}>
                           {courseModulesData.map((mod, index) => (
                             <div key={mod.id} style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: index !== courseModulesData.length - 1 ? '32px' : '0', position: 'relative' }}>
-                              {/* Timeline line */}
+                              
                               {index !== courseModulesData.length - 1 && (
                                 <div style={{ position: 'absolute', left: '7px', top: '24px', bottom: '-40px', width: '2px', background: '#D1FAE5', zIndex: 0 }}></div>
                               )}
-                              
-                              {/* Timeline dot */}
+
                               <div style={{ width: '16px', height: '16px', borderRadius: '50%', background: '#10B981', flexShrink: 0, marginTop: '2px', position: 'relative', zIndex: 1 }}></div>
                               
                               <div style={{ flex: 1 }}>
@@ -611,9 +605,8 @@ const Learning = () => {
                         </div>
                       </div>
 
-                      {/* Right Column */}
                       <div>
-                        {/* Overall Performance */}
+                        
                         <div style={{ background: '#FFFFFF', borderRadius: '12px', border: '1px solid #E2E8F0', padding: '24px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)', marginBottom: '24px' }}>
                           <div style={{ fontSize: '14px', fontWeight: '700', color: '#1E293B', marginBottom: '24px', paddingBottom: '16px', borderBottom: '1px solid #F1F5F9' }}>Overall Performance</div>
                           
@@ -638,7 +631,6 @@ const Learning = () => {
                           </div>
                         </div>
 
-                        {/* Quiz Results */}
                         <div style={{ background: '#FFFFFF', borderRadius: '12px', border: '1px solid #E2E8F0', padding: '24px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
                           <div style={{ fontSize: '14px', fontWeight: '700', color: '#1E293B', marginBottom: '24px', paddingBottom: '16px', borderBottom: '1px solid #F1F5F9' }}>Quiz Results</div>
                           
@@ -654,9 +646,9 @@ const Learning = () => {
                     </div>
                   </div>
                 ) : (
-                  // Level 2: Employee Drill-down View
+
                   <div>
-                    {/* Drill-down Header */}
+                    
                     <div style={{ marginBottom: '24px', background: '#FFFFFF', padding: '24px', borderRadius: '12px', border: '1px solid #E2E8F0', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#64748B', marginBottom: '24px' }}>
                         <span style={{ color: '#2563EB', cursor: 'pointer' }} onClick={() => setSelectedEmployeeForAnalytics(null)}>Analytics</span>
@@ -695,7 +687,6 @@ const Learning = () => {
                     </div>
                   </div>
 
-                  {/* 5 KPI Cards */}
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '16px', marginBottom: '24px' }}>
                     <div style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '16px', display: 'flex', alignItems: 'center', gap: '12px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
                       <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#EFF6FF', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#2563EB' }}>
@@ -744,7 +735,6 @@ const Learning = () => {
                     </div>
                   </div>
 
-                  {/* Drill-down Data Table */}
                   <div style={{ background: '#FFFFFF', borderRadius: '12px', border: '1px solid #E2E8F0', overflow: 'hidden' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 24px', borderBottom: '1px solid #F1F5F9' }}>
                       <div style={{ fontSize: '13px', color: '#64748B' }}>5 Enrolled Courses</div>
@@ -1105,7 +1095,7 @@ const Learning = () => {
                 </div>
               ) : (
                 <div>
-                  {/* Header */}
+                  
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '24px' }}>
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '4px' }}>
@@ -1127,7 +1117,6 @@ const Learning = () => {
                 </div>
               </div>
 
-              {/* Insights Row */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '24px' }}>
                 <div style={{ background: '#FEE2E2', borderRadius: '12px', padding: '16px', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                   <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#FCA5A5', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#991B1B', flexShrink: 0 }}>
@@ -1158,7 +1147,6 @@ const Learning = () => {
                 </div>
               </div>
 
-              {/* KPI Row */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px', marginBottom: '32px' }}>
                 <div style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '20px', display: 'flex', alignItems: 'center', gap: '16px', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
                   <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: '#EFF6FF', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#2563EB' }}>
@@ -1198,7 +1186,6 @@ const Learning = () => {
                 </div>
               </div>
 
-              {/* Sub-tabs */}
               <div style={{ display: 'flex', gap: '12px', marginBottom: '24px' }}>
                 {['Employees', 'Courses', 'Quizzes'].map(tab => (
                   <button 
@@ -1220,7 +1207,6 @@ const Learning = () => {
                 ))}
               </div>
 
-              {/* Data Table Container - Employees */}
               {analyticsTab === 'Employees' && (
                 <div style={{ background: '#FFFFFF', borderRadius: '12px', border: '1px solid #E2E8F0', overflow: 'hidden' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 24px', borderBottom: '1px solid #F1F5F9' }}>
@@ -1285,7 +1271,6 @@ const Learning = () => {
               </div>
               )}
 
-              {/* Data Table Container - Courses */}
               {analyticsTab === 'Courses' && (
                 <div style={{ background: '#FFFFFF', borderRadius: '12px', border: '1px solid #E2E8F0', overflow: 'hidden' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 24px', borderBottom: '1px solid #F1F5F9' }}>
@@ -1354,7 +1339,6 @@ const Learning = () => {
                 </div>
               )}
 
-              {/* Data Table Container - Quizzes */}
               {analyticsTab === 'Quizzes' && (
                 <div style={{ background: '#FFFFFF', borderRadius: '12px', border: '1px solid #E2E8F0', overflow: 'hidden' }}>
                   <div style={{ padding: '16px 24px', borderBottom: '1px solid #F1F5F9' }}>
@@ -1460,7 +1444,7 @@ const Learning = () => {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: '24px' }}>
-            {/* Left Column */}
+            
             <div>
               <div className="lm-course-card" style={{ marginBottom: '24px' }}>
                 <div className="lm-card-header" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
@@ -1518,11 +1502,11 @@ const Learning = () => {
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                       {['A', 'B', 'C', 'D'].map((opt, idx) => {
-                        const isCorrect = idx === 2;
+                        const isCorrect = (mockQuizAnswers[`wizard-${qNum}`] !== undefined ? mockQuizAnswers[`wizard-${qNum}`] : 2) === idx;
                         return (
-                          <div key={idx} className="lm-question-option" style={{ display: 'flex', alignItems: 'center', gap: '12px', border: isCorrect ? '1px solid #10B981' : '1px solid #E2E8F0', borderRadius: '6px', padding: '8px 12px', background: '#FFFFFF' }}>
-                            <div style={{ width: '14px', height: '14px', borderRadius: '50%', border: isCorrect ? '4px solid #2563EB' : '1px solid #CBD5E1', cursor: 'pointer' }}></div>
-                            <input type="text" placeholder={isCorrect ? `Option ${opt} (Correct)` : `Option ${opt}`} style={{ border: 'none', outline: 'none', fontSize: '12px', width: '100%', color: isCorrect ? '#059669' : '#1E293B' }} />
+                          <div key={idx} onClick={() => setMockQuizAnswers({ ...mockQuizAnswers, [`wizard-${qNum}`]: idx })} className="lm-question-option" style={{ display: 'flex', alignItems: 'center', gap: '12px', border: isCorrect ? '1px solid #10B981' : '1px solid #E2E8F0', borderRadius: '6px', padding: '8px 12px', background: '#FFFFFF', cursor: 'pointer' }}>
+                            <div style={{ width: '14px', height: '14px', borderRadius: '50%', border: isCorrect ? '4px solid #2563EB' : '1px solid #CBD5E1', cursor: 'pointer', background: isCorrect ? '#2563EB' : 'transparent', boxShadow: isCorrect ? 'inset 0 0 0 2px #fff' : 'none' }}></div>
+                            <input type="text" placeholder={isCorrect ? `Option ${opt} (Correct)` : `Option ${opt}`} style={{ border: 'none', outline: 'none', fontSize: '12px', width: '100%', color: isCorrect ? '#059669' : '#1E293B', cursor: 'pointer', background: 'transparent' }} readOnly={false} />
                           </div>
                         );
                       })}
@@ -1532,9 +1516,8 @@ const Learning = () => {
               </div>
             </div>
 
-            {/* Right Column (Sidebar) */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-              {/* Settings Box */}
+              
               <div className="lm-course-card">
                 <div className="lm-card-header" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
                   <FiSettings size={18} color="#2563EB" />
@@ -1566,7 +1549,6 @@ const Learning = () => {
                 </div>
               </div>
 
-              {/* Status Box */}
               <div className="lm-course-card">
                 <div className="lm-card-header" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
                   <FiLayout size={18} color="#2563EB" />
@@ -1581,7 +1563,6 @@ const Learning = () => {
                 </div>
               </div>
 
-              {/* Upload Questions Box */}
               <div className="lm-course-card">
                 <div className="lm-card-header" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
                   <FiPlus size={18} color="#2563EB" />
@@ -1703,12 +1684,15 @@ const Learning = () => {
                 <input type="text" className="lm-input" placeholder="Enter your question here..." style={{ marginBottom: '12px' }} />
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  {['A', 'B', 'C', 'D'].map((opt, idx) => (
-                    <div key={idx} className="lm-question-option" style={{ display: 'flex', alignItems: 'center', gap: '12px', border: '1px solid #E2E8F0', borderRadius: '6px', padding: '8px 12px', background: '#FFFFFF' }}>
-                      <div style={{ width: '14px', height: '14px', borderRadius: '50%', border: idx === 2 ? '4px solid #2563EB' : '1px solid #CBD5E1', cursor: 'pointer' }}></div>
-                      <input type="text" placeholder={`Option ${opt}`} style={{ border: 'none', outline: 'none', fontSize: '12px', width: '100%', color: '#1E293B' }} />
-                    </div>
-                  ))}
+                  {['A', 'B', 'C', 'D'].map((opt, idx) => {
+                    const isCorrect = (mockQuizAnswers[`modal-${qNum}`] !== undefined ? mockQuizAnswers[`modal-${qNum}`] : 2) === idx;
+                    return (
+                      <div key={idx} onClick={() => setMockQuizAnswers({ ...mockQuizAnswers, [`modal-${qNum}`]: idx })} className="lm-question-option" style={{ display: 'flex', alignItems: 'center', gap: '12px', border: isCorrect ? '1px solid #10B981' : '1px solid #E2E8F0', borderRadius: '6px', padding: '8px 12px', background: '#FFFFFF', cursor: 'pointer' }}>
+                        <div style={{ width: '14px', height: '14px', borderRadius: '50%', border: isCorrect ? '4px solid #2563EB' : '1px solid #CBD5E1', cursor: 'pointer', background: isCorrect ? '#2563EB' : 'transparent', boxShadow: isCorrect ? 'inset 0 0 0 2px #fff' : 'none' }}></div>
+                        <input type="text" placeholder={isCorrect ? `Option ${opt} (Correct)` : `Option ${opt}`} style={{ border: 'none', outline: 'none', fontSize: '12px', width: '100%', color: isCorrect ? '#059669' : '#1E293B', cursor: 'pointer', background: 'transparent' }} readOnly={false} />
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             ))}
@@ -1717,8 +1701,8 @@ const Learning = () => {
           <div className="lm-quiz-footer" style={{ position: 'fixed', bottom: 0, left: 240, right: 0, background: '#F8FAFC', borderTop: '1px solid #E2E8F0', padding: '16px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 10 }}>
             <button style={{ background: 'transparent', border: 'none', color: '#475569', fontSize: '13px', fontWeight: '600', cursor: 'pointer' }} onClick={() => setIsCreatingQuiz(false)}>Cancel</button>
             <div style={{ display: 'flex', gap: '12px' }}>
-              <button onClick={() => console.log("Button clicked!")} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '6px', fontSize: '13px', color: '#475569', fontWeight: '600', cursor: 'pointer' }}>Save Draft</button>
-              <button onClick={() => console.log("Button clicked!")} className="btn-create-course" style={{ padding: '8px 16px', fontSize: '13px' }}>Publish Quiz</button>
+              <button onClick={() => setIsCreatingQuiz(false)} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '6px', fontSize: '13px', color: '#475569', fontWeight: '600', cursor: 'pointer' }}>Save Draft</button>
+              <button onClick={() => setIsCreatingQuiz(false)} className="btn-create-course" style={{ padding: '8px 16px', fontSize: '13px' }}>Publish Quiz</button>
             </div>
           </div>
         </div>
@@ -2341,8 +2325,7 @@ const Learning = () => {
           </div>
         </div>
       )}
-      
-      {/* Edit Course Modal */}
+
       {isEditModalOpen && (
         <div className="lm-modal-overlay">
           <div className="lm-modal">
@@ -2490,8 +2473,7 @@ const Learning = () => {
           </div>
         </div>
       )}
-      
-      {/* Send Reminder Modal */}
+
       {isReminderModalOpen && (
         <div className="lm-modal-overlay">
           <div className="lm-modal" style={{ maxWidth: '480px' }}>
@@ -2536,8 +2518,7 @@ const Learning = () => {
           </div>
         </div>
       )}
-      
-      {/* Assign Course Modal */}
+
       {isAssignModalOpen && (
         <div className="lm-modal-overlay">
           <div className="lm-modal" style={{ maxWidth: '600px' }}>
