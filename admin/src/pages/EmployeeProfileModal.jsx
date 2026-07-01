@@ -169,7 +169,7 @@ const EmployeeProfileModal = ({ show, onClose, employee }) => {
                 <h4 className="epm-doc-name">AADHAAR</h4>
                 <p className="epm-doc-path">C:Folder/media/employee_documents Employee_login_pannel.pdf</p>
                 <p className="epm-doc-date">Uploaded: 2025-11-11 19:52:20</p>
-                <button onClick={() => alert("Button clicked!")} className="epm-doc-view-btn">View</button>
+                <button onClick={() => console.log("Button clicked!")} className="epm-doc-view-btn">View</button>
               </div>
             </div>
           </div>
@@ -179,7 +179,7 @@ const EmployeeProfileModal = ({ show, onClose, employee }) => {
         {/* Footer */}
         <div className="epm-footer">
           <button className="epm-btn-secondary" onClick={onClose}>Close</button>
-          <button onClick={() => alert("Button clicked!")} className="epm-btn-primary">Update Profile</button>
+          <button onClick={() => console.log("Button clicked!")} className="epm-btn-primary">Update Profile</button>
         </div>
 
       </div>

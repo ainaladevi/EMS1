@@ -66,10 +66,10 @@ const LeaveManagement = () => {
           <p className="page-subtitle">Applications, approvals, balances and leave history</p>
         </div>
         <div className="header-actions">
-          <button onClick={() => alert("Button clicked!")} className="btn-secondary">
+          <button onClick={() => console.log("Button clicked!")} className="btn-secondary">
             <FiDownload style={{marginRight: '8px'}} /> Export
           </button>
-          <button onClick={() => alert("Button clicked!")} className="btn-primary">
+          <button onClick={() => console.log("Button clicked!")} className="btn-primary">
             <FiPlus style={{marginRight: '8px'}} /> Add Leave
           </button>
         </div>
@@ -193,8 +193,8 @@ const LeaveManagement = () => {
                       <td>{getStatusPill(rec.status)}</td>
                       <td>
                         <div className="action-buttons-cell">
-                          <button onClick={() => alert("Button clicked!")} className="btn-approve-outline">Approve</button>
-                          <button onClick={() => alert("Button clicked!")} className="btn-reject-outline">Reject</button>
+                          <button onClick={() => console.log("Button clicked!")} className="btn-approve-outline">Approve</button>
+                          <button onClick={() => console.log("Button clicked!")} className="btn-reject-outline">Reject</button>
                           <div style={{position: 'relative'}}>
                             <button className="btn-dot-menu" onClick={() => toggleDropdown(`action-pending-${rec.id}`)}>
                               <FiMoreHorizontal />
@@ -299,11 +299,11 @@ const LeaveManagement = () => {
             <div className="pagination-footer">
               <div className="pagination-text">Showing 1-8 of 32</div>
               <div className="pagination-controls">
-                <button onClick={() => alert("Button clicked!")} className="page-btn"><FiArrowLeft size={14} /></button>
-                <button onClick={() => alert("Button clicked!")} className="page-btn active">1</button>
-                <button onClick={() => alert("Button clicked!")} className="page-btn">2</button>
-                <button onClick={() => alert("Button clicked!")} className="page-btn">3</button>
-                <button onClick={() => alert("Button clicked!")} className="page-btn"><FiArrowRight size={14} /></button>
+                <button onClick={() => console.log("Button clicked!")} className="page-btn"><FiArrowLeft size={14} /></button>
+                <button onClick={() => console.log("Button clicked!")} className="page-btn active">1</button>
+                <button onClick={() => console.log("Button clicked!")} className="page-btn">2</button>
+                <button onClick={() => console.log("Button clicked!")} className="page-btn">3</button>
+                <button onClick={() => console.log("Button clicked!")} className="page-btn"><FiArrowRight size={14} /></button>
               </div>
             </div>
           </div>
@@ -318,7 +318,7 @@ const LeaveManagement = () => {
               <FiSearch className="leave-search-icon" />
               <input type="text" className="leave-search-input" placeholder="Ravi Kumar" defaultValue="Ravi Kumar" />
             </div>
-            <button onClick={() => alert("Button clicked!")} className="filter-btn-outline">FY 2025-26</button>
+            <button onClick={() => console.log("Button clicked!")} className="filter-btn-outline">FY 2025-26</button>
           </div>
 
           <div className="balances-grid">
@@ -545,9 +545,9 @@ const LeaveManagement = () => {
             <div className="calendar-left-pane">
               <div className="calendar-header">
                 <div className="calendar-nav">
-                  <button onClick={() => alert("Button clicked!")} className="calendar-nav-btn"><FiChevronLeft /></button>
+                  <button onClick={() => console.log("Button clicked!")} className="calendar-nav-btn"><FiChevronLeft /></button>
                   <h2>April 2026</h2>
-                  <button onClick={() => alert("Button clicked!")} className="calendar-nav-btn"><FiChevronRight /></button>
+                  <button onClick={() => console.log("Button clicked!")} className="calendar-nav-btn"><FiChevronRight /></button>
                 </div>
                 <div className="calendar-hint">Click any date to view details</div>
               </div>
@@ -704,8 +704,8 @@ const LeaveManagement = () => {
             </div>
             <div className="modal-footer">
               <button className="btn-secondary-light" onClick={() => setSelectedLeave(null)}>Close</button>
-              <button onClick={() => alert("Button clicked!")} className="btn-approve-outline">Approve</button>
-              <button onClick={() => alert("Button clicked!")} className="btn-reject-outline">Reject</button>
+              <button onClick={() => console.log("Button clicked!")} className="btn-approve-outline">Approve</button>
+              <button onClick={() => console.log("Button clicked!")} className="btn-reject-outline">Reject</button>
             </div>
           </div>
         </div>

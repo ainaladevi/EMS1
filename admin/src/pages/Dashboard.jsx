@@ -276,8 +276,8 @@ const Dashboard = () => {
                     {announcement.isUnread && <span className="unread-dot"></span>}
                   </div>
                   <div className="announcement-actions">
-                    <button onClick={() => alert("Button clicked!")} className="action-btn" title="Edit"><FiEdit2 size={14} /></button>
-                    <button onClick={() => alert("Button clicked!")} className="action-btn" title="Delete"><FiTrash2 size={14} /></button>
+                    <button onClick={() => console.log("Button clicked!")} className="action-btn" title="Edit"><FiEdit2 size={14} /></button>
+                    <button onClick={() => console.log("Button clicked!")} className="action-btn" title="Delete"><FiTrash2 size={14} /></button>
                   </div>
                 </div>
               </div>
@@ -312,11 +312,11 @@ const Dashboard = () => {
               {activeTab === 'devices' ? `Your Devices (${devices.length})` : `Active Sessions (${sessions.length})`}
             </h3>
             <div className="d-flex align-items-center gap-2">
-              <button onClick={() => alert("Button clicked!")} className="btn-refresh">
+              <button onClick={() => console.log("Button clicked!")} className="btn-refresh">
                 <FiRefreshCw className="me-1" /> Refresh
               </button>
               {activeTab === 'sessions' && (
-                <button onClick={() => alert("Button clicked!")} className="btn-outline-custom">
+                <button onClick={() => console.log("Button clicked!")} className="btn-outline-custom">
                   Logout all other sessions
                 </button>
               )}
@@ -344,7 +344,7 @@ const Dashboard = () => {
                   </div>
                   <div className="device-actions">
                     {!device.isCurrent && (
-                      <button onClick={() => alert("Button clicked!")} className="btn-trust">Trust</button>
+                      <button onClick={() => console.log("Button clicked!")} className="btn-trust">Trust</button>
                     )}
                     <button className="btn-remove" onClick={() => removeDevice(device.id)}>Remove</button>
                   </div>

@@ -29,7 +29,7 @@ const Sidebar = () => {
           </div>
           <h2 className="brand-text">EMS</h2>
         </div>
-        <button className="sidebar-toggle-btn" onClick={() => alert('Sidebar toggle clicked!')}>
+        <button className="sidebar-toggle-btn" onClick={() => console.log('Sidebar toggle clicked!')}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
         </button>
       </div>
@@ -98,7 +98,7 @@ const Sidebar = () => {
 
       <div className="sidebar-footer">
         <hr className="sidebar-divider" />
-        <button className="logout-btn" onClick={() => alert('Logout clicked!')}>
+        <button className="logout-btn" onClick={() => console.log('Logout clicked!')}>
           <FiLogOut className="menu-icon" /> Logout
         </button>
       </div>

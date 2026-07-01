@@ -84,7 +84,7 @@ const Compliance = () => {
           </div>
           <div className="comp-actions">
             <button className="btn-new-policy" onClick={() => setShowCreateModal(true)}><FiPlus size={14} /> New Policy</button>
-            <button onClick={() => alert("Button clicked!")} className="btn-refresh"><FiRefreshCw size={14} /> Refresh</button>
+            <button onClick={() => console.log("Button clicked!")} className="btn-refresh"><FiRefreshCw size={14} /> Refresh</button>
           </div>
         </div>
       </div>
@@ -141,7 +141,7 @@ const Compliance = () => {
                       <td><span className="status-pill status-published">{row.status}</span></td>
                       <td style={{ textAlign: 'center' }}>{row.mandatory}</td>
                       <td style={{ textAlign: 'right' }}>
-                        <button onClick={() => alert("Button clicked!")} className="btn-view">View</button>
+                        <button onClick={() => console.log("Button clicked!")} className="btn-view">View</button>
                       </td>
                     </tr>
                   ))}
@@ -273,7 +273,7 @@ const Compliance = () => {
                           <span className="cat-count-pill">{cat.count}</span>
                         </td>
                         <td>
-                          <button onClick={() => alert("Button clicked!")} className="btn-cat-action">...</button>
+                          <button onClick={() => console.log("Button clicked!")} className="btn-cat-action">...</button>
                         </td>
                       </tr>
                     ))}
@@ -333,7 +333,7 @@ const Compliance = () => {
           <div className="cr-tab">
             <div className="cr-header-row">
               <h3 className="cr-section-title">Organization-Wide Compliance Report</h3>
-              <button onClick={() => alert("Button clicked!")} className="btn-export"><FiDownload /> Export</button>
+              <button onClick={() => console.log("Button clicked!")} className="btn-export"><FiDownload /> Export</button>
             </div>
 
             <div className="my-comp-kpi-grid">
@@ -520,7 +520,7 @@ const Compliance = () => {
             
             <div className="cpm-footer">
               <button className="cpm-btn-cancel" onClick={() => setShowCreateModal(false)}>Cancel</button>
-              <button onClick={() => alert("Button clicked!")} className="cpm-btn-draft">Save Draft</button>
+              <button onClick={() => console.log("Button clicked!")} className="cpm-btn-draft">Save Draft</button>
               <button className="cpm-btn-publish" onClick={() => {
                 setShowCreateModal(false);
                 setShowSuccessBanner(true);

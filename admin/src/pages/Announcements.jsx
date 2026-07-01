@@ -458,7 +458,7 @@ const Announcements = () => {
 
             <div className="modal-footer">
               <button className="btn-cancel" onClick={() => setModalState({ ...modalState, isOpen: false })}>Cancel</button>
-              <button onClick={() => alert("Button clicked!")} className="btn-save">
+              <button onClick={() => console.log("Button clicked!")} className="btn-save">
                 <FiCheck className="me-2" /> Save announcement
               </button>
             </div>

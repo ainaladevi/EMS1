@@ -346,7 +346,7 @@ const Learning = () => {
                   </div>
                   <div className="lm-actions">
                     <button className="btn-create-course" onClick={() => setIsCreatingCourse(true)}><FiPlus size={14} /> Create Course</button>
-                    <button onClick={() => alert("Button clicked!")} className="btn-lm-refresh"><FiRefreshCw size={14} /> Refresh</button>
+                    <button onClick={() => console.log("Button clicked!")} className="btn-lm-refresh"><FiRefreshCw size={14} /> Refresh</button>
                   </div>
                 </div>
               </div>
@@ -435,9 +435,9 @@ const Learning = () => {
                 <div className="lm-card-footer">
                   <div className="lm-card-actions">
                     <button className="lm-action-btn" onClick={() => setSelectedCourseId(course.id)}><FiEye size={12} /></button>
-                    <button onClick={() => alert("Button clicked!")} className="lm-action-btn"><FiEdit2 size={12} /></button>
-                    <button onClick={() => alert("Button clicked!")} className="lm-action-btn"><FiBarChart2 size={12} /></button>
-                    <button onClick={() => alert("Button clicked!")} className="lm-action-btn"><FiUser size={12} /></button>
+                    <button onClick={() => console.log("Button clicked!")} className="lm-action-btn"><FiEdit2 size={12} /></button>
+                    <button onClick={() => console.log("Button clicked!")} className="lm-action-btn"><FiBarChart2 size={12} /></button>
+                    <button onClick={() => console.log("Button clicked!")} className="lm-action-btn"><FiUser size={12} /></button>
                   </div>
                   <span className="lm-hours">{course.hours}</span>
                 </div>
@@ -538,7 +538,7 @@ const Learning = () => {
                         <td style={{ padding: '16px 24px', textAlign: 'right' }}>
                           <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
                             <button onClick={() => setEditingQuizId(quiz.id)} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', padding: '4px 12px', borderRadius: '6px', fontSize: '12px', color: '#64748B', fontWeight: '500', cursor: 'pointer' }}>Edit</button>
-                            <button onClick={() => alert("Button clicked!")} style={{ background: '#FEF2F2', border: '1px solid #FEE2E2', padding: '4px 12px', borderRadius: '6px', fontSize: '12px', color: '#EF4444', fontWeight: '500', cursor: 'pointer' }}>Delete</button>
+                            <button onClick={() => console.log("Button clicked!")} style={{ background: '#FEF2F2', border: '1px solid #FEE2E2', padding: '4px 12px', borderRadius: '6px', fontSize: '12px', color: '#EF4444', fontWeight: '500', cursor: 'pointer' }}>Delete</button>
                           </div>
                         </td>
                       </tr>
@@ -748,7 +748,7 @@ const Learning = () => {
                   <div style={{ background: '#FFFFFF', borderRadius: '12px', border: '1px solid #E2E8F0', overflow: 'hidden' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 24px', borderBottom: '1px solid #F1F5F9' }}>
                       <div style={{ fontSize: '13px', color: '#64748B' }}>5 Enrolled Courses</div>
-                      <button onClick={() => alert("Button clicked!")} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '6px 12px', borderRadius: '6px', fontSize: '12px', color: '#1E293B', fontWeight: '600', cursor: 'pointer' }}>
+                      <button onClick={() => console.log("Button clicked!")} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '6px 12px', borderRadius: '6px', fontSize: '12px', color: '#1E293B', fontWeight: '600', cursor: 'pointer' }}>
                         <FiDownload size={14} /> Export Report
                       </button>
                     </div>
@@ -836,7 +836,7 @@ const Learning = () => {
                         </div>
                       </div>
                     </div>
-                    <button onClick={() => alert("Button clicked!")} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', color: '#1E293B', fontWeight: '600', cursor: 'pointer' }}>
+                    <button onClick={() => console.log("Button clicked!")} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', color: '#1E293B', fontWeight: '600', cursor: 'pointer' }}>
                       <FiDownload size={16} /> Export Course Data
                     </button>
                   </div>
@@ -944,7 +944,7 @@ const Learning = () => {
                               <td style={{ padding: '16px 24px', fontSize: '13px', fontWeight: '700', color: scoreColor }}>{emp.score}</td>
                               <td style={{ padding: '16px 24px', fontSize: '12px', color: '#94A3B8' }}>{emp.lastActive}</td>
                               <td style={{ padding: '16px 24px', textAlign: 'center' }}>
-                                <button onClick={() => alert("Button clicked!")} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', width: '28px', height: '28px', borderRadius: '6px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', color: '#64748B', cursor: 'pointer' }}>
+                                <button onClick={() => console.log("Button clicked!")} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', width: '28px', height: '28px', borderRadius: '6px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', color: '#64748B', cursor: 'pointer' }}>
                                   <FiEye size={14} />
                                 </button>
                               </td>
@@ -972,7 +972,7 @@ const Learning = () => {
                         <div style={{ fontSize: '12px', color: '#64748B' }}>{selectedQuizForAnalytics.course}</div>
                       </div>
                     </div>
-                    <button onClick={() => alert("Button clicked!")} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', color: '#1E293B', fontWeight: '600', cursor: 'pointer' }}>
+                    <button onClick={() => console.log("Button clicked!")} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', color: '#1E293B', fontWeight: '600', cursor: 'pointer' }}>
                       <FiDownload size={16} /> Export Quiz Data
                     </button>
                   </div>
@@ -1121,7 +1121,7 @@ const Learning = () => {
                     </select>
                     <FiChevronDown style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', color: '#64748B', pointerEvents: 'none' }} />
                   </div>
-                  <button onClick={() => alert("Button clicked!")} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', color: '#1E293B', fontWeight: '600', cursor: 'pointer' }}>
+                  <button onClick={() => console.log("Button clicked!")} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', color: '#1E293B', fontWeight: '600', cursor: 'pointer' }}>
                     <FiDownload size={16} /> Export
                   </button>
                 </div>
@@ -1428,9 +1428,9 @@ const Learning = () => {
         <div className="lm-edit-quiz-view" style={{ paddingBottom: '80px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
             <div className="lm-tabs" style={{ background: '#FFFFFF', padding: '4px', borderRadius: '8px', border: '1px solid #E2E8F0', display: 'flex', gap: '4px' }}>
-              <button onClick={() => alert("Button clicked!")} className="lm-tab"><FiBookOpen className="lm-tab-icon" /> Courses</button>
-              <button onClick={() => alert("Button clicked!")} className="lm-tab active"><FiHelpCircle className="lm-tab-icon" /> Quizzes</button>
-              <button onClick={() => alert("Button clicked!")} className="lm-tab"><FiBarChart2 className="lm-tab-icon" /> Analytics</button>
+              <button onClick={() => console.log("Button clicked!")} className="lm-tab"><FiBookOpen className="lm-tab-icon" /> Courses</button>
+              <button onClick={() => console.log("Button clicked!")} className="lm-tab active"><FiHelpCircle className="lm-tab-icon" /> Quizzes</button>
+              <button onClick={() => console.log("Button clicked!")} className="lm-tab"><FiBarChart2 className="lm-tab-icon" /> Analytics</button>
             </div>
             <button 
               style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: '600', color: '#1E293B', display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }} 
@@ -1501,7 +1501,7 @@ const Learning = () => {
                     <FiAlignLeft size={18} color="#2563EB" />
                     <h3 style={{ fontSize: '15px', fontWeight: '700', color: '#1E293B', margin: 0 }}>Questions</h3>
                   </div>
-                  <button onClick={() => alert("Button clicked!")} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '6px 12px', borderRadius: '6px', fontSize: '12px', color: '#475569', fontWeight: '600', cursor: 'pointer' }}>+ Add Question</button>
+                  <button onClick={() => console.log("Button clicked!")} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '6px 12px', borderRadius: '6px', fontSize: '12px', color: '#475569', fontWeight: '600', cursor: 'pointer' }}>+ Add Question</button>
                 </div>
 
                 {[1, 2, 3].map((qNum) => (
@@ -1511,7 +1511,7 @@ const Learning = () => {
                         <div style={{ background: '#EFF6FF', color: '#2563EB', fontSize: '11px', fontWeight: '700', padding: '4px 8px', borderRadius: '4px' }}>Q{qNum}</div>
                         <div style={{ border: '1px solid #E2E8F0', padding: '4px 12px', borderRadius: '6px', fontSize: '11px', color: '#475569', fontWeight: '500' }}>Multiple Choice</div>
                       </div>
-                      <button onClick={() => alert("Button clicked!")} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', padding: '4px 12px', borderRadius: '4px', fontSize: '11px', color: '#475569', fontWeight: '500', cursor: 'pointer' }}>Delete</button>
+                      <button onClick={() => console.log("Button clicked!")} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', padding: '4px 12px', borderRadius: '4px', fontSize: '11px', color: '#475569', fontWeight: '500', cursor: 'pointer' }}>Delete</button>
                     </div>
 
                     <input type="text" className="lm-input" defaultValue={`Enter question ${qNum} here...`} style={{ marginBottom: '12px' }} />
@@ -1599,8 +1599,8 @@ const Learning = () => {
           <div className="lm-quiz-footer" style={{ position: 'fixed', bottom: 0, left: 240, right: 0, background: '#F8FAFC', borderTop: '1px solid #E2E8F0', padding: '16px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 10 }}>
             <button style={{ background: '#F1F5F9', border: 'none', borderRadius: '6px', padding: '8px 16px', color: '#475569', fontSize: '13px', fontWeight: '600', cursor: 'pointer' }} onClick={() => setEditingQuizId(null)}>Cancel</button>
             <div style={{ display: 'flex', gap: '12px' }}>
-              <button onClick={() => alert("Button clicked!")} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '6px', fontSize: '13px', color: '#475569', fontWeight: '600', cursor: 'pointer' }}>Save as Draft</button>
-              <button onClick={() => alert("Button clicked!")} className="btn-create-course" style={{ padding: '8px 16px', fontSize: '13px' }}>Save Changes</button>
+              <button onClick={() => console.log("Button clicked!")} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '6px', fontSize: '13px', color: '#475569', fontWeight: '600', cursor: 'pointer' }}>Save as Draft</button>
+              <button onClick={() => console.log("Button clicked!")} className="btn-create-course" style={{ padding: '8px 16px', fontSize: '13px' }}>Save Changes</button>
             </div>
           </div>
         </div>
@@ -1608,9 +1608,9 @@ const Learning = () => {
         <div className="lm-create-quiz-view" style={{ paddingBottom: '80px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
             <div className="lm-tabs" style={{ background: '#FFFFFF', padding: '4px', borderRadius: '8px', border: '1px solid #E2E8F0', display: 'flex', gap: '4px' }}>
-              <button onClick={() => alert("Button clicked!")} className="lm-tab"><FiBookOpen className="lm-tab-icon" /> Courses</button>
-              <button onClick={() => alert("Button clicked!")} className="lm-tab active"><FiHelpCircle className="lm-tab-icon" /> Quizzes</button>
-              <button onClick={() => alert("Button clicked!")} className="lm-tab"><FiBarChart2 className="lm-tab-icon" /> Analytics</button>
+              <button onClick={() => console.log("Button clicked!")} className="lm-tab"><FiBookOpen className="lm-tab-icon" /> Courses</button>
+              <button onClick={() => console.log("Button clicked!")} className="lm-tab active"><FiHelpCircle className="lm-tab-icon" /> Quizzes</button>
+              <button onClick={() => console.log("Button clicked!")} className="lm-tab"><FiBarChart2 className="lm-tab-icon" /> Analytics</button>
             </div>
             <button 
               style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: '600', color: '#1E293B', display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }} 
@@ -1675,10 +1675,10 @@ const Learning = () => {
                 <h3 style={{ fontSize: '15px', fontWeight: '700', color: '#1E293B', margin: 0 }}>Questions</h3>
               </div>
               <div style={{ display: 'flex', gap: '12px' }}>
-                <button onClick={() => alert("Button clicked!")} style={{ display: 'flex', alignItems: 'center', gap: '6px', background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '6px 12px', borderRadius: '6px', fontSize: '12px', color: '#475569', fontWeight: '600', cursor: 'pointer' }}>
+                <button onClick={() => console.log("Button clicked!")} style={{ display: 'flex', alignItems: 'center', gap: '6px', background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '6px 12px', borderRadius: '6px', fontSize: '12px', color: '#475569', fontWeight: '600', cursor: 'pointer' }}>
                   <LuFileText size={14} /> Bulk Upload (CSV)
                 </button>
-                <button onClick={() => alert("Button clicked!")} className="btn-create-course" style={{ padding: '6px 12px', fontSize: '12px' }}>+ Add Question</button>
+                <button onClick={() => console.log("Button clicked!")} className="btn-create-course" style={{ padding: '6px 12px', fontSize: '12px' }}>+ Add Question</button>
               </div>
             </div>
 
@@ -1695,8 +1695,8 @@ const Learning = () => {
                     <div style={{ border: '1px solid #E2E8F0', padding: '4px 12px', borderRadius: '6px', fontSize: '11px', color: '#475569', fontWeight: '500' }}>Multiple Choice</div>
                   </div>
                   <div style={{ display: 'flex', gap: '8px' }}>
-                    <button onClick={() => alert("Button clicked!")} style={{ background: '#F8FAFC', border: 'none', padding: '4px 12px', borderRadius: '4px', fontSize: '11px', color: '#64748B', fontWeight: '600', cursor: 'pointer' }}>Copy</button>
-                    <button onClick={() => alert("Button clicked!")} style={{ background: '#FEF2F2', border: 'none', padding: '4px 12px', borderRadius: '4px', fontSize: '11px', color: '#EF4444', fontWeight: '600', cursor: 'pointer' }}>Delete</button>
+                    <button onClick={() => console.log("Button clicked!")} style={{ background: '#F8FAFC', border: 'none', padding: '4px 12px', borderRadius: '4px', fontSize: '11px', color: '#64748B', fontWeight: '600', cursor: 'pointer' }}>Copy</button>
+                    <button onClick={() => console.log("Button clicked!")} style={{ background: '#FEF2F2', border: 'none', padding: '4px 12px', borderRadius: '4px', fontSize: '11px', color: '#EF4444', fontWeight: '600', cursor: 'pointer' }}>Delete</button>
                   </div>
                 </div>
 
@@ -1717,8 +1717,8 @@ const Learning = () => {
           <div className="lm-quiz-footer" style={{ position: 'fixed', bottom: 0, left: 240, right: 0, background: '#F8FAFC', borderTop: '1px solid #E2E8F0', padding: '16px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 10 }}>
             <button style={{ background: 'transparent', border: 'none', color: '#475569', fontSize: '13px', fontWeight: '600', cursor: 'pointer' }} onClick={() => setIsCreatingQuiz(false)}>Cancel</button>
             <div style={{ display: 'flex', gap: '12px' }}>
-              <button onClick={() => alert("Button clicked!")} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '6px', fontSize: '13px', color: '#475569', fontWeight: '600', cursor: 'pointer' }}>Save Draft</button>
-              <button onClick={() => alert("Button clicked!")} className="btn-create-course" style={{ padding: '8px 16px', fontSize: '13px' }}>Publish Quiz</button>
+              <button onClick={() => console.log("Button clicked!")} style={{ background: '#FFFFFF', border: '1px solid #E2E8F0', padding: '8px 16px', borderRadius: '6px', fontSize: '13px', color: '#475569', fontWeight: '600', cursor: 'pointer' }}>Save Draft</button>
+              <button onClick={() => console.log("Button clicked!")} className="btn-create-course" style={{ padding: '8px 16px', fontSize: '13px' }}>Publish Quiz</button>
             </div>
           </div>
         </div>
@@ -1726,9 +1726,9 @@ const Learning = () => {
         <div className="lm-course-details-view">
           <div className="lm-details-top-bar">
             <div className="lm-tabs">
-              <button onClick={() => alert("Button clicked!")} className="lm-tab active"><FiBookOpen className="lm-tab-icon" /> Courses</button>
-              <button onClick={() => alert("Button clicked!")} className="lm-tab"><FiHelpCircle className="lm-tab-icon" /> Quizzes</button>
-              <button onClick={() => alert("Button clicked!")} className="lm-tab"><FiBarChart2 className="lm-tab-icon" /> Analytics</button>
+              <button onClick={() => console.log("Button clicked!")} className="lm-tab active"><FiBookOpen className="lm-tab-icon" /> Courses</button>
+              <button onClick={() => console.log("Button clicked!")} className="lm-tab"><FiHelpCircle className="lm-tab-icon" /> Quizzes</button>
+              <button onClick={() => console.log("Button clicked!")} className="lm-tab"><FiBarChart2 className="lm-tab-icon" /> Analytics</button>
             </div>
             <button className="btn-back-courses" onClick={() => setSelectedCourseId(null)}>
               <FiArrowLeft size={16} /> Back to Courses
@@ -1753,7 +1753,7 @@ const Learning = () => {
                 <button className="btn-form-cancel" onClick={() => setIsEditModalOpen(true)}><FiEdit size={14} /> Edit</button>
                 <button className="btn-form-cancel" onClick={() => setIsAssignModalOpen(true)}><FiUserPlus size={14} /> Assign Course</button>
                 <button className="btn-form-cancel" onClick={() => setIsReminderModalOpen(true)}><FiSend size={14} /> Send Reminder</button>
-                <button onClick={() => alert("Button clicked!")} className="btn-form-next"><FiDownload size={14} /> Export Report</button>
+                <button onClick={() => console.log("Button clicked!")} className="btn-form-next"><FiDownload size={14} /> Export Report</button>
               </div>
             </div>
           </div>
@@ -1869,7 +1869,7 @@ const Learning = () => {
                   </td>
                   <td><span className="lm-score-text">94%</span></td>
                   <td>Today</td>
-                  <td><button onClick={() => alert("Button clicked!")} className="btn-remind">Remind</button></td>
+                  <td><button onClick={() => console.log("Button clicked!")} className="btn-remind">Remind</button></td>
                 </tr>
                 <tr>
                   <td>
@@ -1889,7 +1889,7 @@ const Learning = () => {
                   </td>
                   <td>-</td>
                   <td>Yesterday</td>
-                  <td><button onClick={() => alert("Button clicked!")} className="btn-remind">Remind</button></td>
+                  <td><button onClick={() => console.log("Button clicked!")} className="btn-remind">Remind</button></td>
                 </tr>
                 <tr>
                   <td>
@@ -1909,7 +1909,7 @@ const Learning = () => {
                   </td>
                   <td><span className="lm-score-text">88%</span></td>
                   <td>Apr 20</td>
-                  <td><button onClick={() => alert("Button clicked!")} className="btn-remind">Remind</button></td>
+                  <td><button onClick={() => console.log("Button clicked!")} className="btn-remind">Remind</button></td>
                 </tr>
                 <tr>
                   <td>
@@ -1929,7 +1929,7 @@ const Learning = () => {
                   </td>
                   <td>-</td>
                   <td>Apr 19</td>
-                  <td><button onClick={() => alert("Button clicked!")} className="btn-remind">Remind</button></td>
+                  <td><button onClick={() => console.log("Button clicked!")} className="btn-remind">Remind</button></td>
                 </tr>
                 <tr>
                   <td>
@@ -1949,7 +1949,7 @@ const Learning = () => {
                   </td>
                   <td>-</td>
                   <td>—</td>
-                  <td><button onClick={() => alert("Button clicked!")} className="btn-remind">Remind</button></td>
+                  <td><button onClick={() => console.log("Button clicked!")} className="btn-remind">Remind</button></td>
                 </tr>
                 <tr>
                   <td>
@@ -1969,7 +1969,7 @@ const Learning = () => {
                   </td>
                   <td><span className="lm-score-text">91%</span></td>
                   <td>Apr 18</td>
-                  <td><button onClick={() => alert("Button clicked!")} className="btn-remind">Remind</button></td>
+                  <td><button onClick={() => console.log("Button clicked!")} className="btn-remind">Remind</button></td>
                 </tr>
               </tbody>
             </table>
@@ -2613,7 +2613,7 @@ const Learning = () => {
                             <div className="lm-employee-avatar" style={{ backgroundColor: emp.bg }}>{emp.initials}</div>
                             <span className="lm-employee-name">{emp.name}</span>
                           </div>
-                          <button onClick={() => alert("Button clicked!")} className="btn-add-employee">+ Add</button>
+                          <button onClick={() => console.log("Button clicked!")} className="btn-add-employee">+ Add</button>
                         </div>
                       ))}
                     </div>
