@@ -7,6 +7,9 @@ import Tasks from '../pages/Tasks.jsx';
 import Employees from '../pages/Employees.jsx';
 import AttendanceOverview from '../pages/AttendanceOverview.jsx';
 import LeaveManagement from '../pages/LeaveManagement.jsx';
+import Analytics from '../pages/Analytics.jsx';
+import Compliance from '../pages/Compliance.jsx';
+import Learning from '../pages/Learning.jsx';
 
 const AppRoutes = () => {
   return (
@@ -18,6 +21,9 @@ const AppRoutes = () => {
         <Route path="employees" element={<Employees />} />
         <Route path="attendance" element={<AttendanceOverview />} />
         <Route path="leave" element={<LeaveManagement />} />
+        <Route path="analytics" element={<Analytics />} />
+        <Route path="compliance" element={<Compliance />} />
+        <Route path="learning" element={<Learning />} />
       </Route>
     </Routes>
   );

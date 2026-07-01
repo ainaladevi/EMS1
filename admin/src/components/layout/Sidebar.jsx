@@ -97,6 +97,7 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar-footer">
+        <hr className="sidebar-divider" />
         <button className="logout-btn">
           <FiLogOut className="menu-icon" /> Logout
         </button>

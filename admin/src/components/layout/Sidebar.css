@@ -170,6 +170,14 @@
   margin-top: auto;
 }
 
+.sidebar-divider {
+  border: none;
+  height: 2px;
+  background-color: #2563EB;
+  margin: 0 0 16px 0;
+  border-radius: 2px;
+}
+
 .logout-btn {
   display: flex;
   align-items: center;

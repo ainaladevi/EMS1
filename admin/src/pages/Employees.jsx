@@ -192,7 +192,12 @@ const Employees = () => {
                 <td><span className="emp-name-text">{emp.name}</span></td>
                 <td>{emp.designation}</td>
                 <td><span className={`dept-pill dept-${emp.deptClass}`}>{emp.dept}</span></td>
-                <td><span className="status-dot"></span>Active</td>
+                <td>
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <span className="status-dot"></span>
+                    <span style={{ whiteSpace: 'nowrap' }}>Active</span>
+                  </div>
+                </td>
                 <td>
                   <div className="action-btns">
                     <button className="btn-action-outline" onClick={() => setViewModalEmp(emp)}>View</button>
