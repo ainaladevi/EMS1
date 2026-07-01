@@ -177,27 +177,27 @@ const AttendanceOverview = () => {
       <div className="attendance-stat-grid">
         <div className="attendance-stat-card">
           <div className="attendance-stat-title">PRESENT TODAY</div>
-          <div className="attendance-stat-value stat-green">18</div>
+          <div className="attendance-stat-value att-stat-green">18</div>
           <div className="attendance-stat-subtitle">of 24 employees</div>
         </div>
         <div className="attendance-stat-card">
           <div className="attendance-stat-title">ABSENT TODAY</div>
-          <div className="attendance-stat-value stat-red">3</div>
+          <div className="attendance-stat-value att-stat-red">3</div>
           <div className="attendance-stat-subtitle">2 on approved leave</div>
         </div>
         <div className="attendance-stat-card">
           <div className="attendance-stat-title">LATE ARRIVALS</div>
-          <div className="attendance-stat-value stat-orange">2</div>
+          <div className="attendance-stat-value att-stat-orange">2</div>
           <div className="attendance-stat-subtitle">after 9:30 AM</div>
         </div>
         <div className="attendance-stat-card">
           <div className="attendance-stat-title">WORK FROM HOME</div>
-          <div className="attendance-stat-value stat-blue">5</div>
+          <div className="attendance-stat-value att-stat-blue">5</div>
           <div className="attendance-stat-subtitle">remote today</div>
         </div>
         <div className="attendance-stat-card">
           <div className="attendance-stat-title">OVERTIME (HRS)</div>
-          <div className="attendance-stat-value stat-purple">14</div>
+          <div className="attendance-stat-value att-stat-purple">14</div>
           <div className="attendance-stat-subtitle">this week</div>
         </div>
       </div>

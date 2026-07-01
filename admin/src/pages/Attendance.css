@@ -85,11 +85,11 @@
 }
 
 /* Stat Value Colors */
-.stat-green { color: #10B981; }
-.stat-red { color: #EF4444; }
-.stat-orange { color: #F59E0B; }
-.stat-blue { color: #3B82F6; }
-.stat-purple { color: #8B5CF6; }
+.att-stat-green { color: #10B981; }
+.att-stat-red { color: #EF4444; }
+.att-stat-orange { color: #F59E0B; }
+.att-stat-blue { color: #3B82F6; }
+.att-stat-purple { color: #8B5CF6; }
 
 /* Tabs Row */
 .attendance-tabs {
