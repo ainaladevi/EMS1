@@ -13,32 +13,15 @@ const TopNavbar = () => {
   ];
 
   return (
-    <header 
-      className="d-flex align-items-center justify-content-between px-4 border-bottom bg-white"
-      style={{ 
-        height: 'var(--topbar-height)', 
-        position: 'sticky', 
-        top: 0, 
-        zIndex: 1000,
-        marginLeft: 'var(--sidebar-width)'
-      }}
-    >
+    <header className="d-flex align-items-center justify-content-between px-4 border-bottom bg-white ems-topbar">
       <div className="d-flex align-items-center gap-2">
         {tabs.map((tab, idx) => (
           <NavLink
             key={idx}
             to={tab.path}
             className={({ isActive }) => 
-              `btn btn-sm px-3 py-1 ${isActive ? 'fw-semibold' : 'text-muted bg-white'}`
+              `btn btn-sm px-3 py-1 ems-topbar-navlink ${isActive ? 'active' : ''}`
             }
-            style={({ isActive }) => ({
-              backgroundColor: isActive ? 'rgba(43, 92, 255, 0.08)' : '#ffffff',
-              color: isActive ? 'var(--color-primary)' : 'var(--text-muted)',
-              border: isActive ? '1px solid transparent' : '1px solid #e2e8f0',
-              borderRadius: '6px',
-              transition: '0.2s',
-              fontSize: '13px'
-            })}
           >
             {tab.label}
           </NavLink>
@@ -62,15 +45,7 @@ const TopNavbar = () => {
           </span>
         </div>
 
-        <div 
-          className="d-flex align-items-center gap-2 border bg-white shadow-sm" 
-          style={{ 
-            cursor: 'pointer', 
-            padding: '4px 12px 4px 4px', 
-            borderRadius: '8px',
-            borderColor: '#e2e8f0'
-          }}
-        >
+        <div className="d-flex align-items-center gap-2 border bg-white shadow-sm ems-profile-dropdown">
           <div 
             className="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold"
             style={{ width: '32px', height: '32px', fontSize: '13px' }}

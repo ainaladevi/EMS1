@@ -10,15 +10,18 @@ import {
   BsClock,
   BsHouse,
   BsPencilSquare,
-  BsChevronRight
+  BsChevronRight,
+  BsCalendarDate
 } from 'react-icons/bs';
 
 const AttendancePage = () => {
   const [isCheckedIn, setIsCheckedIn] = useState(false);
+  const [showWfhModal, setShowWfhModal] = useState(false);
+  const [showRegularizationModal, setShowRegularizationModal] = useState(false);
 
   return (
     <div className="p-4 mx-auto" style={{ maxWidth: '1200px' }}>
-      {/* Header */}
+
       <div className="d-flex justify-content-between align-items-end mb-4">
         <div>
           <nav aria-label="breadcrumb">
@@ -41,11 +44,11 @@ const AttendancePage = () => {
       </div>
 
       <div className="row g-4">
-        {/* LEFT COLUMN: Main Timer Card */}
+
         <div className="col-lg-8">
           <Card className="p-4 shadow-sm border-0 h-100 rounded-4">
             
-            {/* Timer Header */}
+
             <div className="d-flex justify-content-between align-items-center mb-5">
               {!isCheckedIn ? (
                 <div className="d-flex align-items-center rounded-pill px-3 py-1" style={{ backgroundColor: '#f1f5f9' }}>
@@ -63,7 +66,7 @@ const AttendancePage = () => {
             
             <hr style={{ borderTop: '1px solid #f1f5f9', opacity: 1, margin: '0 0 2.5rem 0' }} />
 
-            {/* Timer Display */}
+
             <div className="text-center mb-5">
               {!isCheckedIn ? (
                 <>
@@ -119,7 +122,7 @@ const AttendancePage = () => {
 
             <hr style={{ borderColor: '#f1f5f9', margin: '2rem 0' }} />
 
-            {/* Today's Goal */}
+
             <div className="mb-5">
               <div className="d-flex justify-content-between mb-3">
                 <h6 className="fw-bold mb-0 text-dark" style={{ fontSize: '13px' }}>Today's Goal</h6>
@@ -133,7 +136,7 @@ const AttendancePage = () => {
                   )}
                 </div>
                 
-                {/* Tick marks */}
+
                 <div className="d-flex justify-content-between position-absolute w-100" style={{ top: '14px', fontSize: '10px', color: '#94a3b8', fontWeight: 500 }}>
                   <span>0h</span>
                   <span>2h</span>
@@ -144,7 +147,7 @@ const AttendancePage = () => {
               </div>
             </div>
 
-            {/* Activity Timeline */}
+
             <div>
               <h6 className="fw-bold mb-4" style={{ fontSize: '11px', letterSpacing: '1px', color: '#94a3b8' }}>ACTIVITY TIMELINE</h6>
               
@@ -181,10 +184,10 @@ const AttendancePage = () => {
           </Card>
         </div>
 
-        {/* RIGHT COLUMN: Sidebar Widgets */}
+
         <div className="col-lg-4 d-flex flex-column gap-3">
           
-          {/* Alert Box */}
+
           {!isCheckedIn ? (
             <div className="p-3 rounded-4 d-flex gap-3" style={{ backgroundColor: '#ffffff', border: '1px solid #fcd34d' }}>
               <BsSunFill size={20} className="mt-1" style={{ color: '#f59e0b' }} />
@@ -203,7 +206,7 @@ const AttendancePage = () => {
             </div>
           )}
 
-          {/* Monthly Attendance */}
+
           <Card className="p-4 shadow-sm border-0 rounded-4">
             <div className="row text-center mb-4">
               <div className="col-4 border-end">
@@ -229,11 +232,11 @@ const AttendancePage = () => {
             </div>
           </Card>
 
-          {/* Quick Actions */}
+
           <Card className="p-4 shadow-sm border-0 rounded-4">
             <h6 className="fw-bold mb-4" style={{ fontSize: '11px', letterSpacing: '1px', color: '#94a3b8' }}>QUICK ACTIONS</h6>
             
-            <div className="d-flex align-items-center justify-content-between mb-3 p-3 rounded-3" style={{ border: '1px solid #f1f5f9', cursor: 'pointer' }}>
+            <div className="d-flex align-items-center justify-content-between mb-3 p-3 rounded-3" style={{ border: '1px solid #f1f5f9', cursor: 'pointer' }} onClick={() => setShowWfhModal(true)}>
               <div className="d-flex align-items-center gap-3">
                 <div className="rounded-2 d-flex align-items-center justify-content-center" style={{ width: '32px', height: '32px', backgroundColor: '#f0fdf4', color: '#22c55e' }}>
                   <BsHouse size={16} />
@@ -246,7 +249,7 @@ const AttendancePage = () => {
               <BsChevronRight size={12} className="text-muted" />
             </div>
             
-            <div className="d-flex align-items-center justify-content-between p-3 rounded-3" style={{ border: '1px solid #f1f5f9', cursor: 'pointer' }}>
+            <div className="d-flex align-items-center justify-content-between p-3 rounded-3" style={{ border: '1px solid #f1f5f9', cursor: 'pointer' }} onClick={() => setShowRegularizationModal(true)}>
               <div className="d-flex align-items-center gap-3">
                 <div className="rounded-2 d-flex align-items-center justify-content-center" style={{ width: '32px', height: '32px', backgroundColor: '#eff6ff', color: '#3b82f6' }}>
                   <BsPencilSquare size={16} />
@@ -260,7 +263,7 @@ const AttendancePage = () => {
             </div>
           </Card>
 
-          {/* Current Location */}
+
           <Card className="p-4 shadow-sm border-0 rounded-4">
             <h6 className="fw-bold mb-3" style={{ fontSize: '11px', letterSpacing: '1px', color: '#94a3b8' }}>CURRENT LOCATION</h6>
             <div className="p-3 rounded-3 d-flex align-items-center gap-3" style={{ backgroundColor: '#f8fafc' }}>
@@ -274,7 +277,7 @@ const AttendancePage = () => {
             </div>
           </Card>
 
-          {/* Policy Update */}
+
           <Card className="p-4 shadow-sm border-0 rounded-4">
             <div className="d-flex align-items-center gap-2 mb-3">
               <div className="rounded-circle d-flex align-items-center justify-content-center" style={{ width: '28px', height: '28px', backgroundColor: '#f1f5f9', color: '#64748b' }}>
@@ -288,8 +291,80 @@ const AttendancePage = () => {
             <a href="#" className="fw-semibold text-decoration-none" style={{ fontSize: '12px', color: '#2b5cff' }}>Read policy &rarr;</a>
           </Card>
           
+          
         </div>
       </div>
+
+      {(showWfhModal || showRegularizationModal) && (
+        <div className="modal-backdrop fade show" style={{ zIndex: 1040, backgroundColor: 'rgba(15, 23, 42, 0.4)' }}></div>
+      )}
+
+      {showRegularizationModal && (
+        <div className="modal fade show d-block" tabIndex="-1" style={{ zIndex: 1050 }} onClick={() => setShowRegularizationModal(false)}>
+          <div className="modal-dialog modal-dialog-centered" onClick={e => e.stopPropagation()}>
+            <div className="modal-content border-0 shadow-lg p-4" style={{ borderRadius: '12px', borderBottom: '6px solid #60a5fa' }}>
+              <div className="d-flex justify-content-between align-items-start mb-3">
+                <div>
+                  <h5 className="fw-bold mb-1" style={{ fontSize: '20px', color: '#0f172a' }}>New Regularization</h5>
+                  <p className="text-muted mb-0" style={{ fontSize: '13px' }}>Correct your attendance records by providing a valid justification for the discrepancy.</p>
+                </div>
+                <button type="button" className="btn-close" style={{ fontSize: '12px' }} onClick={() => setShowRegularizationModal(false)}></button>
+              </div>
+              <div className="mb-3">
+                <label className="fw-bold mb-2" style={{ fontSize: '10px', letterSpacing: '0.5px', color: '#737373' }}>EFFECTIVE DATE</label>
+                <div className="position-relative">
+                  <input type="text" className="form-control border-0" placeholder="mm/dd/yyyy" style={{ fontSize: '13px', padding: '10px 14px', backgroundColor: '#f5f5f5' }} />
+                  <BsCalendarDate className="position-absolute text-muted" size={14} style={{ right: '14px', top: '12px' }} />
+                </div>
+              </div>
+              <div className="mb-3">
+                <label className="fw-bold mb-2" style={{ fontSize: '10px', letterSpacing: '0.5px', color: '#737373' }}>REASON FOR REQUEST</label>
+                <textarea className="form-control border-0" rows="3" placeholder="e.g. Technical glitch at entrance gate, forgot to swipe card..." style={{ fontSize: '13px', padding: '10px 14px', resize: 'none', backgroundColor: '#f5f5f5' }}></textarea>
+              </div>
+              <div className="d-flex align-items-start gap-2 p-3 mb-4 rounded-3" style={{ backgroundColor: '#f5f5f5' }}>
+                <BsInfoCircle className="text-muted mt-1 flex-shrink-0" size={12} />
+                <p className="mb-0 text-muted" style={{ fontSize: '11px', lineHeight: '1.5' }}>Please be concise. Requests are reviewed by the HR department and your direct supervisor. Attachments can be added after submission.</p>
+              </div>
+              <div className="d-flex gap-3">
+                <button className="btn fw-semibold w-50" style={{ backgroundColor: '#e2e8f0', color: '#0f172a', fontSize: '13px', padding: '10px' }} onClick={() => setShowRegularizationModal(false)}>Cancel</button>
+                <button className="btn fw-semibold w-50 text-white" style={{ backgroundColor: '#2b5cff', fontSize: '13px', padding: '10px' }} onClick={() => setShowRegularizationModal(false)}>Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showWfhModal && (
+        <div className="modal fade show d-block" tabIndex="-1" style={{ zIndex: 1050 }} onClick={() => setShowWfhModal(false)}>
+          <div className="modal-dialog modal-dialog-centered" onClick={e => e.stopPropagation()}>
+            <div className="modal-content border-0 shadow-lg p-4" style={{ borderRadius: '12px', borderBottom: '6px solid #60a5fa' }}>
+              <div className="d-flex justify-content-between align-items-start mb-4">
+                <div>
+                  <h5 className="fw-bold mb-1" style={{ fontSize: '20px', color: '#0f172a' }}>WFH Request</h5>
+                  <p className="text-muted mb-0" style={{ fontSize: '13px' }}>Submit your remote work schedule for approval.</p>
+                </div>
+                <button type="button" className="btn-close" style={{ fontSize: '12px' }} onClick={() => setShowWfhModal(false)}></button>
+              </div>
+              <div className="mb-3">
+                <label className="fw-bold mb-2" style={{ fontSize: '10px', letterSpacing: '0.5px', color: '#64748b' }}>REQUEST DATE</label>
+                <div className="position-relative">
+                  <input type="text" className="form-control text-dark" placeholder="mm/dd/yyyy" style={{ fontSize: '13px', padding: '10px 14px', border: '1px solid #e2e8f0', borderRadius: '6px', backgroundColor: '#ffffff', boxShadow: 'none' }} />
+                  <BsCalendarDate className="position-absolute text-muted" size={14} style={{ right: '14px', top: '12px' }} />
+                </div>
+              </div>
+              <div className="mb-4">
+                <label className="fw-bold mb-2" style={{ fontSize: '10px', letterSpacing: '0.5px', color: '#64748b' }}>REASON FOR REQUEST</label>
+                <textarea className="form-control text-muted" rows="3" placeholder="Detail your request objectives..." style={{ fontSize: '13px', padding: '10px 14px', resize: 'none', border: '1px solid #e2e8f0', borderRadius: '6px', backgroundColor: '#ffffff', boxShadow: 'none' }}></textarea>
+              </div>
+              <div className="d-flex flex-column gap-2 mt-2">
+                <button className="btn fw-semibold w-100 text-white" style={{ backgroundColor: '#2b5cff', fontSize: '14px', padding: '12px', borderRadius: '6px' }} onClick={() => setShowWfhModal(false)}>Submit Request</button>
+                <button className="btn fw-semibold w-100 text-muted bg-transparent border-0" style={{ fontSize: '13px' }} onClick={() => setShowWfhModal(false)}>Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };

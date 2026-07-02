@@ -52,8 +52,8 @@ const AttendanceSummary = ({ data }) => {
           <div key={idx} className="col-md-3">
             <Card hoverable className="h-100 p-3 d-flex align-items-center gap-3">
               <div 
-                className="rounded p-2 d-flex align-items-center justify-content-center"
-                style={{ backgroundColor: stat.bg, color: stat.color, width: '48px', height: '48px' }}
+                className="ems-icon-box"
+                style={{ backgroundColor: stat.bg, color: stat.color }}
               >
                 <stat.icon size={24} />
               </div>

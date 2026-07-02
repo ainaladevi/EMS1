@@ -7,6 +7,9 @@ import TasksPage from '../pages/Tasks';
 import AttendancePage from '../pages/Attendance';
 import AttendanceOverview from '../pages/AttendanceOverview';
 import LeavePage from '../pages/Leave';
+import Payroll from '../pages/Payroll';
+import Expenses from '../pages/Expenses';
+import Compliance from '../pages/Compliance';
 
 const Placeholder = ({ title }) => (
   <div className="p-4 d-flex justify-content-center align-items-center" style={{ height: '50vh' }}>
@@ -31,15 +34,15 @@ const AppRoutes = () => {
         <Route path="chat" element={<Placeholder title="Chat" />} />
         
         <Route path="hr" element={<Placeholder title="HR Overview" />} />
-        <Route path="payroll" element={<Placeholder title="Payroll" />} />
-        <Route path="expenses" element={<Placeholder title="Expenses" />} />
+        <Route path="payroll" element={<Payroll />} />
+        <Route path="expenses" element={<Expenses />} />
         
         <Route path="performance" element={<Placeholder title="Performance" />} />
         <Route path="learning" element={<Placeholder title="Learning" />} />
         
         <Route path="documents" element={<Placeholder title="Documents" />} />
         <Route path="analytics" element={<Placeholder title="Analytics" />} />
-        <Route path="compliance" element={<Placeholder title="Compliance" />} />
+        <Route path="compliance" element={<Compliance />} />
         
         <Route path="projects" element={<Placeholder title="Projects" />} />
         <Route path="employees" element={<Placeholder title="Employees" />} />

@@ -67,48 +67,42 @@ const Sidebar = () => {
   ];
 
   return (
-    <div 
-      className="d-flex flex-column flex-shrink-0" 
-      style={{ 
-        width: 'var(--sidebar-width)', 
-        height: '100vh', 
-        backgroundColor: 'var(--bg-sidebar)',
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        overflowY: 'auto'
-      }}
-    >
-      <div className="d-flex align-items-center mb-4 px-4 pt-4" style={{ color: 'white' }}>
-        <div className="bg-primary rounded p-2 me-2 d-flex align-items-center justify-content-center">
-          <span className="fw-bold fs-5">O</span>
+    <div className="d-flex flex-column flex-shrink-0 ems-sidebar">
+      <div className="d-flex align-items-center mb-4 px-4 pt-4 text-white">
+        <div className="bg-primary d-flex align-items-center justify-content-center me-3" style={{ width: '32px', height: '32px', borderRadius: '8px' }}>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+          </svg>
         </div>
-        <span className="fs-4 fw-bold">EMS</span>
-        <button className="btn btn-link text-sidebar ms-auto p-0">
-          <LuLayoutDashboard size={20} style={{ color: 'var(--text-sidebar)' }} />
+        <span className="fw-bold" style={{ fontSize: '20px', letterSpacing: '0.5px' }}>EMS</span>
+        <button className="btn btn-link text-sidebar ms-auto p-0 text-muted">
+          <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
         </button>
       </div>
 
       <div className="px-3 mb-4">
-        <div className="input-group">
-          <span className="input-group-text bg-transparent border-0" style={{ position: 'absolute', zIndex: 10, color: 'var(--text-sidebar)', background: '#1c2434' }}>
-            <LuLayoutDashboard size={16} />
-          </span>
-          <input 
-            type="text" 
-            className="form-control" 
-            placeholder="Search" 
-            style={{ 
-              backgroundColor: '#1c2434', 
-              border: 'none', 
-              color: 'white',
-              paddingLeft: '35px',
-              borderRadius: '6px'
-            }} 
-          />
-          <span className="position-absolute end-0 top-50 translate-middle-y pe-2" style={{ color: 'var(--text-sidebar)', zIndex: 10, fontSize: '0.75rem' }}>
-            ⌘K
-          </span>
+        <div 
+          className="d-flex align-items-center justify-content-between w-100" 
+          style={{ 
+            backgroundColor: '#1e293b', 
+            borderRadius: '8px', 
+            padding: '6px 12px',
+          }}
+        >
+          <div className="d-flex align-items-center gap-2 flex-grow-1">
+            <svg stroke="#94a3b8" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input 
+              type="text" 
+              placeholder="Search" 
+              className="bg-transparent border-0 text-white w-100 shadow-none p-0"
+              style={{ fontSize: '14px', outline: 'none' }}
+              onFocus={(e) => e.target.parentElement.parentElement.style.backgroundColor = '#2a364a'}
+              onBlur={(e) => e.target.parentElement.parentElement.style.backgroundColor = '#1e293b'}
+            />
+          </div>
+          <div className="d-flex align-items-center text-muted ms-2 flex-shrink-0" style={{ fontSize: '12px', backgroundColor: '#2a364a', padding: '2px 6px', borderRadius: '4px' }}>
+            <span>⌘K</span>
+          </div>
         </div>
       </div>
 
@@ -123,14 +117,8 @@ const Sidebar = () => {
                 key={itemIdx} 
                 to={item.path} 
                 className={({ isActive }) => 
-                  `nav-link d-flex align-items-center px-3 py-2 mb-1 rounded-3 ${isActive ? 'active' : ''}`
+                  `nav-link d-flex align-items-center px-3 py-2 mb-1 rounded-3 ems-sidebar-navlink ${isActive ? 'active' : ''}`
                 }
-                style={({ isActive }) => ({
-                  color: isActive ? 'var(--text-sidebar-active)' : 'var(--text-sidebar)',
-                  backgroundColor: isActive ? 'var(--color-primary)' : 'transparent',
-                  fontWeight: 500,
-                  transition: 'background-color 0.2s, color 0.2s'
-                })}
               >
                 <item.icon className="me-3" size={18} />
                 {item.label}
@@ -143,7 +131,7 @@ const Sidebar = () => {
       <hr style={{ borderColor: 'rgba(255,255,255,0.1)' }} />
       
       <div className="px-3 pb-4">
-        <NavLink to="/logout" className="nav-link d-flex align-items-center px-3 py-2 text-sidebar rounded-3" style={{ color: 'var(--text-sidebar)', transition: '0.2s' }}>
+        <NavLink to="/logout" className="nav-link d-flex align-items-center px-3 py-2 rounded-3 ems-sidebar-navlink">
           <LuLogOut className="me-3" size={18} />
           Logout
         </NavLink>

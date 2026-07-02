@@ -15,10 +15,7 @@ const TaskSummary = ({ data }) => {
       <div className="row g-3">
         <div className="col-md-4">
           <Card hoverable className="h-100 p-3 d-flex align-items-center gap-3">
-            <div 
-              className="rounded p-2 d-flex align-items-center justify-content-center bg-light text-primary"
-              style={{ width: '48px', height: '48px' }}
-            >
+            <div className="ems-icon-box bg-light text-primary">
               <LuListTodo size={24} />
             </div>
             <div>
@@ -31,10 +28,7 @@ const TaskSummary = ({ data }) => {
 
         <div className="col-md-4">
           <Card hoverable className="h-100 p-3 d-flex align-items-center gap-3">
-            <div 
-              className="rounded p-2 d-flex align-items-center justify-content-center"
-              style={{ backgroundColor: '#ecfdf5', color: '#10b981', width: '48px', height: '48px' }}
-            >
+            <div className="ems-icon-box ems-badge-soft-green">
               <BsCheckSquare size={24} />
             </div>
             <div>
@@ -47,10 +41,7 @@ const TaskSummary = ({ data }) => {
 
         <div className="col-md-4">
           <Card hoverable className="h-100 p-3 d-flex align-items-center gap-3">
-            <div 
-              className="rounded p-2 d-flex align-items-center justify-content-center"
-              style={{ backgroundColor: '#fffbeb', color: '#f59e0b', width: '48px', height: '48px' }}
-            >
+            <div className="ems-icon-box ems-badge-soft-orange">
               <LuClock size={24} />
             </div>
             <div>
